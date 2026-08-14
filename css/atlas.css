@@ -1,0 +1,435 @@
+/* ==========================================================================
+   atlas.css — 시네마틱 껍데기
+
+   참고 디자인(SEN_homepage.html)의 색·타이포·구성을 따르되,
+   장면을 겹쳐 교차 전환하는 방식은 쓰지 않습니다.
+   섹션(.scene)이 위에서 아래로 그냥 이어지는 평범한 세로 스크롤입니다.
+
+   섹션 안쪽 내용(카드·타임라인·채용 아코디언)은 기존 components.css 를 그대로 씁니다.
+   여기서는 색만 이 디자인에 맞게 덮어씁니다.
+   ========================================================================== */
+
+:root {
+  /* 참고 디자인의 팔레트 — 밝은 장면(회사소개/프로젝트/뉴스/채용) 배경을
+     완전 흰색으로 통일. 예전엔 연한 회색(#f5f5f7)이었습니다. */
+  --paper:   #ffffff;
+  --paper-2: #e8e8ed;
+  --ink:     #1d1d1f;
+  --dim:     #6e6e73;
+  --blue:    #0071e3;
+  --line:    #e2e2e7;
+  --night:   #0b0f1a;
+
+  /* 기존 컴포넌트가 쓰는 토큰을 이 팔레트로 재정의 */
+  --c-navy: #0b0f1a;
+  --c-blue: #0071e3;
+  --c-blue-dark: #0066cc;
+  --c-ink: #1d1d1f;
+  --c-muted: #6e6e73;
+  --c-line: #e2e2e7;
+  --c-tint: #eef4fd;
+}
+
+html { scroll-behavior: auto; }   /* 스크롤 위치를 직접 제어하므로 smooth 를 끕니다 */
+
+body {
+  background: var(--night);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* 섹션은 위에서 아래로 그냥 이어집니다.
+   예전에는 #stage 를 고정해 두고 장면을 겹쳐 교차 전환했는데,
+   스크롤할 때마다 창이 통째로 바뀌는 느낌이라 걷어냈습니다.
+   (되살리려면 무대 고정 + 장면 겹침이 필요하지만, 권하지 않습니다) */
+/* 상단 메뉴(회사소개/프로젝트/뉴스/채용)를 누르면 이 섹션의 맨 위가
+   고정 헤더 바로 아래로 스크롤됩니다(atlas.js goTo) — 그래서 위쪽
+   여백이 크면 헤더 밑에 빈 공간이 그대로 보입니다. 아래쪽 여백(다음
+   섹션과의 경계)은 원래대로 두고 위쪽만 줄였습니다. */
+.scene {
+  position: relative;
+  padding: clamp(40px, 6vh, 72px) 0 clamp(72px, 10vh, 128px);
+  overflow-x: hidden;
+}
+.scene[hidden] { display: none; }
+.scene + .scene { border-top: 1px solid var(--line); }
+
+.scene__inner {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+}
+
+/* 밝은 장면 (회사소개·프로젝트·뉴스·채용) */
+.scene--paper { background: var(--paper); }
+.scene--paper .scene__inner { color: var(--ink); }
+
+/* ---------- 표지 (첫 화면, 사진 크로스페이드) ----------
+   본문(main) 앞에 화면 전체를 채운 채 고정되어(position:fixed) 배경처럼
+   깔려 있습니다. 아래 ".cover + main" 규칙이 본문을 표지 높이(100vh)만큼
+   내려서 시작시키므로, 처음엔 표지만 보이다가 스크롤하면 본문(불투명
+   배경)이 위로 슬라이드해 올라오며 표지를 덮습니다 — "아래 창이 위 창을
+   덮는" 느낌. z-index가 음수라 일반 흐름의 본문(z-index 지정 없음)보다
+   항상 뒤에 그려지므로, main 쪽에 별도 position/z-index를 줄 필요가
+   없고 atlas.js의 offsetTop 기준 스크롤 계산도 그대로 맞습니다. */
+.cover {
+  position: fixed; inset: 0; z-index: -1;
+  isolation: isolate;
+  display: grid; grid-template-rows: auto 1fr auto;
+  padding: clamp(20px, 3.4vw, 46px);
+  overflow: hidden;
+  background: var(--night);
+  color: #fff;
+  font-family: "Noto Sans KR", -apple-system, "Malgun Gothic", sans-serif;
+}
+.cover__bg { position: absolute; inset: 0; z-index: -2; }
+.cover__bg img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0;
+}
+.cover__veil {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(6,10,18,.72) 0%, rgba(6,10,18,.28) 30%,
+                            rgba(6,10,18,.42) 62%, rgba(6,10,18,.86) 100%),
+    radial-gradient(120% 90% at 50% 40%, transparent 40%, rgba(6,10,18,.5) 100%);
+}
+.cover__vision {
+  font-family: "Newsreader", Georgia, serif;
+  font-weight: 300; font-style: normal;
+  font-size: clamp(1.05rem, 1.95vw, 1.85rem);
+  line-height: 1.42; letter-spacing: -.005em;
+  max-width: 42ch; margin: 0 auto;
+  text-align: center;
+  color: rgba(255,255,255,.96);
+  text-wrap: balance;
+  text-shadow: 0 2px 18px rgba(0,0,0,.45);
+}
+.cover__foot { display: grid; gap: clamp(14px, 2vw, 22px); }
+.cover__brand {
+  font-family: "Anton", Impact, sans-serif; font-weight: 400;
+  display: block; width: 100%;
+  line-height: 1.06; letter-spacing: -.015em;
+  white-space: nowrap;
+  font-size: 12vw;                       /* cover.js가 폭에 맞춰 덮어씁니다 */
+  color: #fff;
+  text-shadow: 0 6px 40px rgba(0,0,0,.42);
+}
+.cover__row { display: flex; justify-content: flex-end; }
+.cover__cue {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: .68rem; letter-spacing: .3em; color: rgba(255,255,255,.72);
+}
+.cover__cue i {
+  display: block; width: 42px; height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,.75), transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover__bg img { animation: none; opacity: 0; transform: none; }
+  .cover__bg img:first-child { opacity: 1; }
+}
+@media (max-width: 640px) {
+  .cover__vision { max-width: none; }
+  .cover__row { justify-content: flex-start; }
+}
+
+/* 표지 바로 다음(본문 전체)을 표지 높이만큼 내려서 시작시킵니다 —
+   그래야 스크롤해야 본문이 표지를 덮으며 올라옵니다. */
+.cover + main { margin-top: 100vh; margin-top: 100dvh; }
+
+/* ---------- 장면 0 : 인트로(텍스트 플립) ----------
+   카카오톡으로 받은 LayoutTextFlip 미리보기를 그대로 이식했습니다.
+   흰 배경 전체화면 히어로라, 더는 어두운 장면이 없습니다
+   (그래서 아래 .topbar 도 밝은/어두운 구분 없이 항상 같은 스타일). */
+#scene-intro {
+  padding: 0; min-height: 100vh; display: grid; place-items: center;
+  background: var(--paper);
+}
+.hero { width: min(760px, 92vw); margin: 0 auto; text-align: center; padding: 90px 0 64px; }
+
+.ltf {
+  position: relative; margin: 1rem auto;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1rem; text-align: center;
+}
+@media (min-width: 640px) {
+  .ltf { flex-direction: row; }
+}
+.ltf__text {
+  font-size: calc(1.5rem + 10pt); font-weight: 700; letter-spacing: -.025em;
+  color: var(--ink);
+  filter: drop-shadow(0 4px 3px rgba(0,0,0,.07));
+}
+.ltf__box {
+  position: relative; overflow: hidden;
+  display: inline-block; vertical-align: middle; flex-shrink: 0;
+  border-radius: 6px;
+  background: #fff; color: var(--blue);
+  padding: .5rem 1rem;
+  font-size: calc(1.5rem + 10pt); font-weight: 700; letter-spacing: -.025em;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 0 0 1px var(--line);
+  transition: width .5s cubic-bezier(.22,1,.36,1);
+}
+@media (min-width: 768px) {
+  .ltf__text, .ltf__box { font-size: calc(2.25rem + 10pt); }
+}
+.ltf__word { display: inline-block; white-space: nowrap; will-change: transform, filter, opacity; }
+.ltf__word--out { position: absolute; left: 1rem; top: .5rem; }
+.ltf__word--in  { animation: ltf-in  .5s cubic-bezier(.22,1,.36,1) both; }
+.ltf__word--out { animation: ltf-out .5s cubic-bezier(.22,1,.36,1) both; }
+@keyframes ltf-in {
+  from { transform: translateY(-40px); filter: blur(10px); }
+  to   { transform: none;              filter: blur(0); }
+}
+@keyframes ltf-out {
+  from { transform: none;             filter: blur(0);     opacity: 1; }
+  to   { transform: translateY(50px); filter: blur(10px);  opacity: 0; }
+}
+.ltf__sizer { position: absolute; visibility: hidden; pointer-events: none; white-space: nowrap; left: -9999px; top: 0; }
+
+.ltf__lead {
+  margin: 1.5rem auto 0; max-width: 46ch;
+  text-align: center; font-size: calc(1rem + 5pt); line-height: 1.7; color: var(--dim);
+}
+
+/* ---------- 상태 배지 (채용중 / 새 소식) ---------- */
+.flags { margin-top: 1.75rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
+.flag {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .55rem 1.1rem; border-radius: 999px;
+  border: 1px solid var(--line); background: #fff;
+  font-size: 1rem; font-weight: 600; color: var(--ink);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.flag:hover { border-color: var(--blue); box-shadow: 0 4px 14px rgba(0,113,227,.14); transform: translateY(-1px); }
+.flag--off { color: #8e8e93; }
+
+.flag__switch { position: relative; flex-shrink: 0; width: 38px; height: 22px; border-radius: 999px; background: #d1d1d6; transition: background .25s; }
+.flag__switch i {
+  position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  transition: transform .25s cubic-bezier(.22,1,.36,1);
+}
+.flag--on .flag__switch { background: #34c759; }
+.flag--on .flag__switch i { transform: translateX(16px); }
+
+.flag__emoji { font-size: 1.15em; line-height: 1; }
+.flag__icon { flex-shrink: 0; display: block; height: 1.5em; width: auto; border-radius: 5px; object-fit: cover; }
+
+.flag--news .flag__emoji, .flag--news .flag__icon { animation: flag-pop 2.4s ease-in-out infinite; }
+@keyframes flag-pop {
+  0%, 82%, 100% { transform: none; }
+  88%           { transform: translateY(-3px) rotate(-8deg); }
+  94%           { transform: translateY(-1px) rotate(5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ltf__word--in, .ltf__word--out { animation: none; }
+  .ltf__word--out { display: none; }
+  .ltf__box { transition: none; }
+  .flag--news .flag__emoji, .flag--news .flag__icon { animation: none; }
+}
+
+/* ---------- 상단 고정 네비 ----------
+   로고·언어만 남아서 항상 투명 배경 + 어두운 글자로 고정했습니다
+   (예전엔 어두운 인트로 위에서 흰 글자 ↔ 밝은 장면에서 흰 배경으로 바뀌었지만,
+   이제 사이트 전체가 밝은 배경이라 그 구분이 필요 없습니다). */
+.topbar {
+  position: fixed; inset: 0 0 auto 0; z-index: 60;
+  display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
+  padding: 16px clamp(20px, 4vw, 48px);
+  color: var(--ink);
+}
+
+.topbar__logo { display: inline-flex; align-items: center; }
+.topbar__logo img { display: block; height: clamp(26px, 3.2vw, 36px); width: auto; }
+
+/* 언어 토글 — 상단 메뉴가 없어져서 .lang 에 margin-left:auto 로 오른쪽 정렬 */
+.lang { position: relative; margin-left: auto; }
+.lang__btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .82rem; font-weight: 700; color: inherit;
+  padding: 6px 11px; border-radius: 999px;
+  border: 1px solid currentColor; opacity: .8;
+}
+.lang__btn:hover { opacity: 1; }
+.lang__menu {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 132px;
+  background: #fff; color: var(--ink);
+  border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+  padding: 6px; display: grid; gap: 2px;
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: all .2s ease;
+}
+.lang.is-open .lang__menu { opacity: 1; visibility: visible; transform: none; }
+.lang__menu button {
+  text-align: left; padding: 8px 12px; border-radius: 8px;
+  font-size: .86rem; color: var(--ink); width: 100%;
+}
+/* --paper가 흰색이라 메뉴 배경(#fff)과 구분이 안 돼 --line으로 표시 */
+.lang__menu button:hover { background: var(--line); }
+
+/* ---------- 오른쪽 진행 점 ---------- */
+#prog {
+  position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 60;
+  display: grid; gap: 12px;
+}
+#prog button {
+  width: 9px; height: 9px; border-radius: 50%; padding: 0;
+  background: rgba(140, 150, 170, .45);
+  transition: background .25s, transform .25s;
+}
+#prog button.is-on { background: var(--blue); transform: scale(1.45); }
+
+/* ---------- 장면 머리말 ---------- */
+.scene__head { margin-bottom: clamp(24px, 4vh, 44px); }
+.scene__kicker {
+  font-size: 11px; letter-spacing: .28em; color: var(--blue);
+  font-weight: 800; margin-bottom: 12px;
+}
+.scene__title {
+  font-weight: 900; letter-spacing: -.03em; line-height: 1.14;
+  font-size: clamp(28px, 4.4vw, 56px); color: var(--ink);
+}
+.scene__title em { font-style: normal; color: var(--blue); }
+.scene__lead {
+  margin-top: 14px; max-width: 62ch; color: var(--dim);
+  font-size: clamp(.95rem, 1.2vw, 1.08rem); line-height: 1.75;
+}
+
+/* 예전 무대 방식에서 쓰던 안쪽 스크롤 칸.
+   지금은 페이지가 통째로 스크롤되므로 높이를 제한하지 않고 그대로 흐르게 둡니다. */
+.scene__scroll { max-height: none; overflow: visible; }
+
+/* 회사소개는 항목이 많아 2단으로 */
+.about-grid {
+  display: grid; gap: clamp(20px, 3vw, 40px);
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+}
+/* 프로젝트 섹션(지도/지구본)은 CEO 섹션보다 오른쪽 칸을 더 넓게 씁니다.
+   .about-grid 는 두 섹션이 같이 쓰는 클래스라, 여기서만 비율을 덮어씁니다. */
+.about-grid--map { grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); }
+@media (max-width: 900px) {
+  .about-grid--map { grid-template-columns: 1fr; }
+}
+/* 회사소개 하위 덩어리 (CEO 인사말 / 연혁 / 주요공법 / CONTACT).
+   예전에는 탭으로 접어 뒀지만, 스크롤로 쭉 읽히도록 펼쳐 두었습니다. */
+.about-block + .about-block { margin-top: clamp(48px, 8vh, 88px); }
+
+/* 소제목(.block__title) 공통 스타일 — 채용 탭의 "채용공고"처럼
+   .about-block 밖에서도 쓰입니다. * { margin:0 } 리셋 때문에 이 규칙이
+   없으면 위아래 다른 내용과 완전히 붙어 보입니다. */
+.block__title {
+  font-size: clamp(20px, 2.4vw, 30px); font-weight: 800;
+  letter-spacing: -.02em; margin: var(--sp-5) 0 var(--sp-3);
+}
+/* 후손 선택자(직계 자식이 아니어도 매칭) — 주요공법 제목은 브로슈어
+   언어 박스와 나란히 두려고 <div> 한 겹을 더 감쌌는데, > 로 직계 자식만
+   고르면 그 안의 제목은 스타일이 안 먹습니다.
+   위쪽 간격은 .about-block + .about-block 이 이미 담당하므로 0으로 둡니다. */
+.about-block .block__title { margin-top: 0; margin-bottom: 10px; }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+  #prog { right: 10px; }
+  /* 예전 무대 고정형 디자인에서 쓰던 안쪽 스크롤 칸 높이 제한입니다.
+     지금은 페이지가 통째로 스크롤되고 .scene__scroll 기본값이
+     overflow:visible 이라, 여기서만 max-height 를 다시 주면 내용이
+     박스 밖으로 삐져나와 바로 아래 섹션과 겹칩니다 (연혁·주요공법 등).
+     되살리지 마세요 — 되살리려면 overflow:auto 도 같이 줘야 합니다. */
+}
+
+/* ---------- 공용 푸터 ----------
+   index.html 맨 아래와 news.html 에 동일한 마크업이 복사되어 있습니다.
+   둘 중 하나만 고치면 다른 쪽과 어긋나니, 문구를 바꿀 땐 content/site.json 의
+   footer.* 값만 고치세요 (마크업 자체를 손대야 할 땐 둘 다 고쳐야 합니다). */
+.site-footer { background: var(--night); color: rgba(255, 255, 255, .72); }
+.site-footer__inner {
+  width: min(1180px, 92vw); margin: 0 auto;
+  padding: clamp(40px, 6vh, 64px) 0;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: clamp(16px, 3vw, 32px);
+}
+.site-footer__brand img { height: clamp(44px, 6vw, 68px); width: auto; display: block; }
+.site-footer__info { text-align: right; font-size: var(--fs-small); line-height: 1.7; }
+.site-footer__copy { margin-top: 4px; font-size: var(--fs-xs); color: rgba(255, 255, 255, .5); }
+
+@media (max-width: 560px) {
+  .site-footer__inner { flex-direction: column; align-items: flex-start; text-align: left; }
+  .site-footer__info { text-align: left; }
+}
+
+/* ---------- 뉴스 상세 페이지 (news.html) ---------- */
+.article-main {
+  background: var(--paper); color: var(--ink);
+  min-height: 60vh;
+  padding: clamp(72px, 10vh, 128px) 0;
+}
+.article { width: min(760px, 92vw); margin: 0 auto; }
+.article__back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: var(--fs-small); font-weight: 700; color: var(--dim);
+  margin-bottom: clamp(28px, 4vh, 48px);
+}
+.article__back:hover { color: var(--blue); }
+
+.article__meta {
+  display: flex; align-items: center; gap: 8px;
+  font-size: var(--fs-xs); color: var(--dim); margin-bottom: 14px;
+}
+.article__cat { color: var(--blue); font-weight: 700; }
+.article__share-wrap { position: relative; margin-left: auto; display: flex; align-items: center; }
+.article__share {
+  display: grid; place-items: center; width: 32px; height: 32px; flex-shrink: 0;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--paper);
+  color: var(--dim); cursor: pointer; transition: color .2s, border-color .2s;
+}
+.article__share svg { width: 16px; height: 16px; }
+.article__share:hover, .article__share.is-copied { color: var(--blue); border-color: var(--blue); }
+.article__share-toast {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 5;
+  background: var(--ink); color: var(--paper); white-space: nowrap;
+  font-size: var(--fs-xs); font-weight: 700; padding: 6px 10px; border-radius: 6px;
+}
+.article__title {
+  font-weight: 900; letter-spacing: -.03em; line-height: 1.3;
+  font-size: clamp(26px, 3.6vw, 42px); color: var(--ink);
+  margin-bottom: clamp(24px, 4vh, 40px);
+}
+.article__hero {
+  border-radius: var(--radius-lg); overflow: hidden; background: var(--ph);
+  aspect-ratio: 16 / 9; margin-bottom: clamp(28px, 4vh, 44px);
+}
+.article__hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.article__body { font-size: 1.05rem; line-height: 1.9; }
+.article__body p + p { margin-top: 1.3em; }
+.article__link { margin-top: clamp(32px, 5vh, 48px); }
+.article__empty { text-align: center; padding: clamp(40px, 8vh, 80px) 0; color: var(--dim); }
+
+/* ---------- 뉴스 전체 목록 페이지 (news-list.html) ----------
+   상세 페이지(.article, 760px 좁은 폭)와 달리 카드 그리드라
+   .scene__inner 와 같은 넓은 폭(1180px)을 씁니다. */
+.newslist-main {
+  background: var(--paper); color: var(--ink);
+  min-height: 60vh;
+  padding: clamp(72px, 10vh, 128px) 0;
+}
+.newslist { width: min(1180px, 92vw); margin: 0 auto; }
+.newslist__head { margin-bottom: clamp(20px, 3vh, 32px); }
+.newslist__head .scene__title { margin-top: 6px; }
+
+/* ---------- 쪽번호 ---------- */
+.pager {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 6px; margin-top: clamp(32px, 5vh, 48px);
+}
+.pager__page {
+  display: grid; place-items: center; min-width: 38px; height: 38px; padding: 0 6px;
+  border-radius: 999px; border: 1px solid var(--line);
+  font-size: .88rem; font-weight: 700; color: var(--ink);
+  transition: border-color .2s, color .2s, background .2s;
+}
+.pager__page:hover { border-color: var(--blue); color: var(--blue); }
+.pager__page.is-on { background: var(--blue); border-color: var(--blue); color: #fff; }

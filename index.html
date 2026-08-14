@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senkuzo / SEN Engineering Group</title>
+<meta name="description" content="1973년부터 이어온 건축구조 원스톱 엔지니어링. PSRC · TSC 선조립 합성구조 공법.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Senkuzo / SEN Engineering Group">
+<meta property="og:description" content="1973년부터 이어온 건축구조 원스톱 엔지니어링.">
+<meta property="og:image" content="assets/img/intro-poster.jpg">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+
+<!-- 웹폰트 Noto Sans KR: 필요 없으면 아래 블록을 통째로 지우면 됩니다 (시스템 폰트로 자동 대체).
+     100~900 가변 폰트라 굵기 하나로 본문(400)부터 로고(900)까지 모두 커버합니다. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap">
+<!-- 표지(첫 화면) 전용 폰트 — 비전 문구(Newsreader)·그룹명(Anton) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap">
+
+<!-- base/components 는 섹션 안쪽 내용(카드·타임라인·채용 아코디언)용,
+     atlas 는 시네마틱 껍데기(고정 무대·장면 전환·상단 네비)용입니다.
+     atlas 가 뒤에 와야 팔레트를 덮어씁니다. -->
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/atlas.css">
+
+</head>
+<body>
+
+<!-- ============ 상단 고정 네비 ============
+     로고·언어만 남기고 4개 메뉴는 없앴습니다. 배경은 항상 투명 유지
+     (atlas.css .topbar — 더는 .is-light 로 흰 배경으로 안 바뀝니다). -->
+<header class="topbar">
+  <a class="topbar__logo" href="#top">
+    <img src="assets/img/logo.png" alt="SEN Engineering Group" width="471" height="110">
+  </a>
+
+  <div class="lang" data-langswitch>
+    <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" data-lang-toggle>
+      <svg class="ico" width="15" height="15" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2.6 10h14.8M10 2.6c4 4.6 4 10.8 0 14.8M10 2.6c-4 4.6-4 10.8 0 14.8" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span data-lang-current>KO</span>
+    </button>
+    <ul class="lang__menu" data-lang-menu role="menu">
+      <li><button type="button" data-lang="ko" role="menuitem">한국어</button></li>
+      <li><button type="button" data-lang="en" role="menuitem">English</button></li>
+      <li><button type="button" data-lang="zh" role="menuitem">中文</button></li>
+      <li><button type="button" data-lang="ja" role="menuitem">日本語</button></li>
+    </ul>
+  </div>
+</header>
+
+<nav id="prog" aria-label="장면 이동"></nav>
+
+<!-- ============ 표지 (첫 화면) ============
+     본문(main) 앞에 배경처럼 고정되어 있다가, 스크롤하면 아래(main)가
+     이 위로 슬라이드해 올라와 덮습니다. 사진 4장이 서서히 교차 전환됩니다
+     (assets/js/cover.js가 타이밍을 계산해 넣습니다). -->
+<section class="cover" data-cover>
+  <div class="cover__bg" data-cover-bg></div>
+  <div class="cover__veil"></div>
+
+  <p class="cover__vision" data-bind="site.hero.coverVision"></p>
+
+  <div></div>
+
+  <div class="cover__foot">
+    <div class="cover__row">
+      <span class="cover__cue"><i></i>SCROLL</span>
+    </div>
+    <span class="cover__brand" data-cover-brand>SEN ENGINEERING</span>
+  </div>
+</section>
+
+<main id="top">
+
+  <!-- ---------- 장면 0 : 인트로 (텍스트 플립) ----------
+       assets/js/hero.js 가 단어 교체 애니메이션과 채용/뉴스 배지를 그립니다.
+       배지 상태는 실제 데이터 기준(careers.jobs 개수, news.items 개수)입니다. -->
+  <section class="scene scene--hero" id="scene-intro" data-label="인트로">
+    <div class="hero">
+      <div class="ltf">
+        <span class="ltf__text">Welcome to</span>
+        <span class="ltf__box" data-ltf-box><span class="ltf__sizer" data-ltf-sizer></span></span>
+      </div>
+      <p class="ltf__lead" data-bind="site.hero.subtitle"></p>
+      <div class="flags" data-flags></div>
+    </div>
+  </section>
+
+  <!-- ---------- 장면 1 : 회사소개 ---------- -->
+  <section class="scene scene--paper" id="scene-about" data-label="회사소개">
+    <div class="scene__inner">
+      <header class="scene__head">
+        <p class="scene__kicker" data-bind="about.section.eyebrow"></p>
+        <h2 class="scene__title" data-bind="about.section.title"></h2>
+        <p class="scene__lead" data-bind="about.section.lead"></p>
+      </header>
+
+      <!-- 제목·인용구는 폭 전체, 그 아래 [사진+서명] / [본문] 2단,
+           맨 아래 약력·자격·수상·저서 4개 아코디언(폭 전체) -->
+      <div class="about-block" id="about-ceo">
+        <!-- 영상 URL(about.ceo.video)이 비어 있으면 render.js가 이 자리를 통째로 숨기고,
+             있으면 자동재생·반복 iframe을 여기에 채워 넣습니다 -->
+        <div class="ceo__video" data-ceo-video hidden></div>
+        <h3 class="block__title" data-bind="about.ceo.heading"></h3>
+        <blockquote class="ceo__quote" data-bind="about.ceo.quote"></blockquote>
+
+        <div class="ceo__intro">
+          <div class="ceo__aside">
+            <div class="ceo__media"><img data-src="about.ceo.photo" alt="" loading="lazy"></div>
+            <p class="ceo__sign">
+              <span class="ceo__role" data-bind="about.ceo.role"></span>
+              <strong class="ceo__name" data-bind="about.ceo.name"></strong>
+            </p>
+          </div>
+          <div class="prose" data-prose="about.ceo.body"></div>
+        </div>
+
+        <div class="ceo__career acc" data-list="about.ceo.careerGroups"></div>
+      </div>
+
+      <div class="about-block" id="about-history">
+        <h3 class="block__title" data-bind="about.history.heading"></h3>
+        <p class="scene__lead" data-bind="about.history.lead"></p>
+        <!-- 회사 창립은 항상 보이도록 고정, 나머지는 연대별로 접습니다 -->
+        <div class="history__pin" data-list="about.history.pinned"></div>
+        <div class="history" data-list="about.history.groups"></div>
+      </div>
+
+      <div class="about-block" id="about-methods">
+        <div class="methods__head">
+          <div>
+            <h3 class="block__title" data-bind="about.methods.heading"></h3>
+            <p class="scene__lead" data-bind="about.methods.lead"></p>
+          </div>
+          <div class="brochure">
+            <div class="brochure__btns">
+              <a class="brochure__btn" href="assets/pdf/senkuzo-brochure-ko.pdf" download>한국어</a>
+              <a class="brochure__btn" href="assets/pdf/senkuzo-brochure-en.pdf" download>English</a>
+              <a class="brochure__btn" href="assets/pdf/senkuzo-brochure-zh.pdf" download>中文</a>
+            </div>
+          </div>
+        </div>
+        <div class="scene__scroll"><div class="methods" data-list="about.methods.items"></div></div>
+      </div>
+
+      <div class="about-block" id="about-contact">
+        <h3 class="block__title" data-bind="about.contact.heading"></h3>
+        <p class="scene__lead" data-bind="about.contact.lead"></p>
+        <div class="scene__scroll"><div class="offices" data-list="about.contact.offices"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- 장면 2 : 프로젝트 (실적 지구본) ---------- -->
+  <section class="scene scene--paper" id="scene-projects" data-label="프로젝트" data-section="projects">
+    <div class="scene__inner">
+      <header class="scene__head">
+        <p class="scene__kicker" data-bind="projects.section.eyebrow"></p>
+        <h2 class="scene__title" data-bind="projects.section.title"></h2>
+        <p class="scene__lead" data-bind="projects.section.lead"></p>
+      </header>
+
+      <!-- 국내 / 국외 탭. 오른쪽 시각화가 탭에 따라 지도 ↔ 지구본으로 바뀝니다. -->
+      <div class="proj-tabs" role="tablist" data-proj-tabs>
+        <button type="button" class="proj-tab is-on" role="tab" aria-selected="true"
+                data-proj-tab="domestic" data-bind="projects.tabs.domestic">국내</button>
+        <button type="button" class="proj-tab" role="tab" aria-selected="false"
+                data-proj-tab="overseas" data-bind="projects.tabs.overseas">국외</button>
+      </div>
+
+      <div class="about-grid about-grid--map">
+        <div>
+          <dl class="globe__stats" data-globe-stats></dl>
+          <div class="scene__scroll"><ol class="regions" data-region-list></ol></div>
+        </div>
+        <div class="globe">
+          <!-- 국내 탭: 한국 지도. 시/도를 클릭하면 시군구 드릴다운이 열립니다. -->
+          <div class="kmap-stage" data-kmap-tab="domestic">
+            <svg class="kmap-svg" data-kmap-svg></svg>
+            <div class="kmap-tip" data-kmap-tip hidden></div>
+          </div>
+          <!-- 국외 탭: 지구본. 가만히 두면 한국이 정면에서 멈춰 있고, 드래그만 됩니다. -->
+          <div class="globe__stage" data-globe data-kmap-tab="overseas" hidden>
+            <div class="globe__pills" data-globe-pills aria-hidden="true"></div>
+            <div class="globe__tip" data-globe-tip hidden></div>
+          </div>
+          <p class="globe__hint" data-globe-hint></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 시/도 드릴다운 팝업 ============
+     한국 지도에서 시/도를 클릭하면 뜹니다. [hidden] + display:grid 조합은
+     base.css 의 [hidden]{display:none!important} 가 이미 안전하게 막아 줍니다
+     (지원하기 팝업과 같은 패턴). -->
+  <div class="kmap-drill" data-kmap-drill hidden>
+    <div class="kmap-drill__backdrop" data-kmap-drill-close></div>
+    <div class="kmap-drill__panel" role="dialog" aria-modal="true">
+      <button class="apply-modal__close" type="button" data-kmap-drill-close aria-label="닫기">&times;</button>
+      <h3 class="kmap-drill__title" data-kmap-drill-title></h3>
+      <p class="kmap-drill__meta" data-kmap-drill-meta></p>
+      <div class="kmap-drill__body">
+        <svg class="kmap-drill__svg" data-kmap-drill-svg viewBox="0 0 640 620"></svg>
+        <ol class="regions" data-kmap-drill-list></ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- 장면 3 : 뉴스 ----------
+       카드는 기존 디자인(테두리·그림자) 그대로, 한 행으로 가로 스크롤되며
+       자동으로 계속 흐릅니다(마우스를 올리면 멈춤, 화살표로 수동 이동도 가능).
+       제목/칩은 .scene__inner 안에서 폭을 맞추지만, 카드 줄(.news-carousel)은
+       .scene__inner 밖(=.scene 의 직계 자식)에 두어 양쪽 끝까지 꽉 채웁니다. -->
+  <section class="scene scene--paper" id="scene-news" data-label="뉴스" data-section="news">
+    <div class="scene__inner">
+      <div class="news__head">
+        <header class="scene__head">
+          <p class="scene__kicker" data-bind="site.news.eyebrow"></p>
+          <h2 class="scene__title" data-bind="site.news.title"></h2>
+          <p class="scene__lead" data-bind="site.news.lead"></p>
+        </header>
+        <a class="news__seeall" href="news-list.html" data-bind="site.ui.loadMore"></a>
+      </div>
+      <div class="chips" data-newsfilter></div>
+    </div>
+    <div class="news-carousel">
+      <button type="button" class="news-carousel__arrow" data-news-arrow="prev" aria-label="이전 기사">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12.5 4.5 6 10l6.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="cards cards--news" data-list="news.items" data-news-track></div>
+      <button type="button" class="news-carousel__arrow" data-news-arrow="next" aria-label="다음 기사">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7.5 4.5 14 10l-6.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ---------- 장면 4 : 채용 ---------- -->
+  <section class="scene scene--paper" id="scene-careers" data-label="채용" data-section="careers">
+    <div class="scene__inner">
+      <header class="scene__head">
+        <p class="scene__kicker" data-bind="site.careers.section.eyebrow"></p>
+        <h2 class="scene__title" data-bind="site.careers.section.title"></h2>
+        <p class="scene__lead" data-bind="site.careers.section.lead"></p>
+      </header>
+      <h3 class="block__title" data-bind="site.careers.jobsHeading"></h3>
+      <div class="scene__scroll">
+        <div class="jobs" data-list="careers.jobs"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 공용 푸터 ============
+     news.html 등 서브 페이지에도 이 블록을 그대로 복사해 씁니다. -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="assets/img/logo.png" alt="SEN Engineering Group" width="471" height="110">
+    </div>
+    <div class="site-footer__info">
+      <p data-bind="site.footer.address"></p>
+      <p data-bind="site.footer.tel"></p>
+      <p class="site-footer__copy" data-bind="site.footer.copyright"></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ 지원하기 팝업 ============
+     "지원하기" 버튼(위 careers.jobs 카드)을 누르면 뜹니다. 실제 메일 발송은
+     서버 없이는 할 수 없어서(공개 저장소에 발송 자격증명을 둘 수 없음),
+     사용자 본인의 메일 앱을 mailto: 링크로 열어 주는 방식입니다 —
+     이 팝업은 그 전에 받는사람·공고명을 한 번 보여주는 확인 단계입니다. -->
+<div class="apply-modal" data-apply-modal hidden>
+  <div class="apply-modal__backdrop" data-apply-close></div>
+  <div class="apply-modal__panel" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <button class="apply-modal__close" type="button" data-apply-close aria-label="닫기">&times;</button>
+    <p class="apply-modal__eyebrow" data-bind="site.ui.apply">지원하기</p>
+    <h3 class="apply-modal__title" id="applyModalTitle" data-apply-job></h3>
+    <p class="apply-modal__to">
+      <span data-bind="site.ui.applyModalTo">받는사람</span> <strong data-apply-to></strong>
+      <button type="button" class="apply-modal__copy" data-apply-copy data-bind="site.ui.applyCopy">주소 복사</button>
+    </p>
+    <p class="apply-modal__hint" data-bind="site.ui.sendMail">클릭하면 메일 작성 창이 열립니다</p>
+    <a class="btn btn--primary apply-modal__send" data-apply-send href="#" data-bind="site.ui.applySend">메일 보내기</a>
+    <p class="apply-modal__fallback" data-bind="site.ui.applyFallback">
+      메일 앱이 안 열리면 위 주소를 복사해 직접 보내주세요.
+    </p>
+  </div>
+</div>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/render.js"></script>
+<script src="assets/js/projects.js"></script>
+<script src="assets/js/globe.js"></script>
+<script src="assets/js/kmap.js"></script>
+<script src="assets/js/controls.js"></script>
+<script src="assets/js/atlas.js"></script>
+<script src="assets/js/hero.js"></script>
+<script src="assets/js/cover.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
