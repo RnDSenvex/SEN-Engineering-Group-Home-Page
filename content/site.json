@@ -1,0 +1,162 @@
+{
+  "company": {
+    "shortName": "SEN",
+    "name": {
+      "ko": "센 엔지니어링그룹",
+      "en": "SEN Engineering Group",
+      "zh": "SEN 工程集团",
+      "ja": "SEN エンジニアリンググループ"
+    }
+  },
+  "seo": {
+    "title": {
+      "ko": "Senkuzo / SEN Engineering Group",
+      "en": "Senkuzo / SEN Engineering Group",
+      "zh": "Senkuzo / SEN Engineering Group",
+      "ja": "Senkuzo / SEN Engineering Group"
+    },
+    "description": {
+      "ko": "1973년 창립 이래 5,000여 건의 구조설계와 독자 원천기술 PSRC·TSC 공법으로 설계부터 시공까지 원스톱 서비스를 제공합니다.",
+      "en": "Since 1973, over 5,000 structural design projects. One-stop service from design to steel construction with our proprietary PSRC and TSC composite systems.",
+      "zh": "自1973年创立以来完成5,000余项结构设计，凭借自主原创技术PSRC·TSC工法提供从设计到施工的一站式服务。",
+      "ja": "1973年の創立以来5,000件超の構造設計。独自技術PSRC・TSC工法により設計から施工までワンストップで提供します。"
+    }
+  },
+
+  "hero": {
+    "eyebrow": {
+      "ko": "SINCE 1973 · STRUCTURAL ENGINEERING",
+      "en": "SINCE 1973 · STRUCTURAL ENGINEERING",
+      "zh": "SINCE 1973 · 结构工程",
+      "ja": "SINCE 1973 · 構造エンジニアリング"
+    },
+    "title": {
+      "ko": "구조를 다시\n설계하다",
+      "en": "Engineering\nthe Frame",
+      "zh": "重新定义\n建筑结构",
+      "ja": "構造を、\n設計しなおす"
+    },
+    "subtitle": {
+      "ko": "믿음으로 약속을 지키고, 경제적이며 편리하고 안전하며 아름다운 구조를 추구합니다. 기본설계부터 강구조 시공까지 하나의 팀이 책임집니다.",
+      "en": "Keeping our promises through trust, pursuing structures that are economical, practical, safe and beautiful — from schematic design to steel erection, delivered by one team.",
+      "zh": "以诚信履约，追求经济、便利、安全且优美的结构。从基本设计到钢结构施工，由一个团队全程负责。",
+      "ja": "信頼をもって約束を守り、経済的で使いやすく安全かつ美しい構造を追求します。基本設計から鉄骨施工まで一つのチームが責任を持ちます。"
+    },
+    "flipWords": ["SEN ENGINEERING", "SEN CORETECH", "SENVEX"],
+    "coverVision": "Korea's only engineering team delivering advanced structural design, fabrication, and construction as one seamless service.",
+    "stats": [
+      {
+        "value": "5,000+",
+        "label": { "ko": "구조설계 실적", "en": "Structural design projects", "zh": "结构设计业绩", "ja": "構造設計実績" }
+      },
+      {
+        "value": "500+",
+        "label": { "ko": "구조안전진단", "en": "Safety diagnoses", "zh": "结构安全诊断", "ja": "構造安全診断" }
+      },
+      {
+        "value": "110+",
+        "label": { "ko": "보유 특허", "en": "Registered patents", "zh": "持有专利", "ja": "保有特許" }
+      },
+      {
+        "value": "7",
+        "label": { "ko": "글로벌 거점", "en": "Global offices", "zh": "全球据点", "ja": "グローバル拠点" }
+      }
+    ]
+  },
+
+  "news": {
+    "eyebrow": {
+      "ko": "02 — NEWS",
+      "en": "02 — NEWS",
+      "zh": "02 — 新闻",
+      "ja": "02 — ニュース"
+    },
+    "title": {
+      "ko": "뉴스 & 기술자료",
+      "en": "News & Technical Archive",
+      "zh": "新闻与技术资料",
+      "ja": "ニュース & 技術資料"
+    },
+    "lead": {
+      "ko": "언론 보도, 행사, 홍보자료, 학회 논문, 기술자료를 한곳에서 확인하실 수 있습니다.",
+      "en": "Press coverage, events, PR materials, academic papers and technical notes in one place.",
+      "zh": "媒体报道、活动、宣传资料、学会论文与技术资料，尽在于此。",
+      "ja": "報道、イベント、広報資料、学会論文、技術資料をまとめてご覧いただけます。"
+    },
+    "categories": ["언론보도", "행사", "홍보자료", "논문", "기술자료"]
+  },
+
+  "careers": {
+    "section": {
+      "eyebrow": { "ko": "04 — CAREERS", "en": "04 — CAREERS", "zh": "04 — 招聘", "ja": "04 — 採用" },
+      "title": { "ko": "함께 구조를 세울 사람", "en": "Build the Frame With Us", "zh": "与我们共同构筑结构", "ja": "ともに構造を築く仲間" },
+      "lead": {
+        "ko": "업계 최고 수준의 교육과 보상으로 직원의 성장을 지원합니다. 관심 있는 공고를 펼쳐 '지원하기'를 누르면 지원 메일 작성 창이 열립니다.",
+        "en": "We invest in our people with industry-leading training and rewards. Open a posting and click Apply — your mail app opens with the application email ready.",
+        "zh": "以业界顶尖的培训与薪酬支持员工成长。展开感兴趣的职位并点击「立即申请」，即可打开申请邮件撰写窗口。",
+        "ja": "業界最高水準の教育と報酬で社員の成長を支援します。気になる募集を開いて「応募する」を押すと、応募メールの作成画面が開きます。"
+      }
+    },
+    "jobsHeading": { "ko": "채용공고", "en": "Open Positions", "zh": "招聘公告", "ja": "採用情報" },
+    "requirementsLabel": { "ko": "자격 요건", "en": "Requirements", "zh": "任职要求", "ja": "応募資格" },
+    "preferredLabel":    { "ko": "우대 사항", "en": "Preferred",   "zh": "优先条件", "ja": "歓迎要件" },
+    "deadlineLabel":     { "ko": "마감",      "en": "Due",         "zh": "截止",     "ja": "締切" },
+    "applyMailSubject": {
+      "ko": "[입사지원] {job} / 지원자 성명",
+      "en": "[Application] {job} / Your name",
+      "zh": "[应聘] {job} / 应聘者姓名",
+      "ja": "[応募] {job} / 応募者氏名"
+    },
+    "applyMailBody": {
+      "ko": "안녕하세요.\n\n센 엔지니어링그룹 채용공고를 보고 지원합니다.\n\n- 성명:\n- 연락처:\n- 최종학력:\n- 경력 요약:\n\n이력서와 포트폴리오를 첨부하였습니다. 검토 부탁드립니다.\n감사합니다.",
+      "en": "Hello,\n\nI would like to apply for the position advertised on your careers page.\n\n- Name:\n- Contact:\n- Education:\n- Experience summary:\n\nMy CV and portfolio are attached. Thank you for your consideration.",
+      "zh": "您好，\n\n本人希望应聘贵集团招聘公告中的职位。\n\n- 姓名：\n- 联系方式：\n- 最高学历：\n- 经历概要：\n\n附上简历与作品集，敬请审阅。谢谢。",
+      "ja": "はじめまして。\n\n採用情報を拝見し応募いたします。\n\n- 氏名：\n- 連絡先：\n- 最終学歴：\n- 経歴概要：\n\n履歴書とポートフォリオを添付いたします。ご査収のほどよろしくお願いいたします。"
+    }
+  },
+
+  "nav": {
+    "about":    { "ko": "회사소개", "en": "About", "zh": "公司介绍", "ja": "会社紹介" },
+    "news":     { "ko": "뉴스",     "en": "News",  "zh": "新闻",     "ja": "ニュース" },
+    "projects": { "ko": "프로젝트", "en": "Projects", "zh": "项目", "ja": "プロジェクト" },
+    "careers":  { "ko": "채용",     "en": "Careers", "zh": "招聘",  "ja": "採用" },
+    "sub": {
+      "ceo":     { "ko": "CEO 인사말", "en": "CEO Message", "zh": "总裁致辞", "ja": "CEO ご挨拶" },
+      "history": { "ko": "회사연혁",   "en": "History",     "zh": "公司沿革", "ja": "沿革" },
+      "methods": { "ko": "주요공법",   "en": "Technologies","zh": "主要工法", "ja": "主要工法" },
+      "contact": { "ko": "CONTACT",    "en": "Contact",     "zh": "联系我们", "ja": "お問い合わせ" }
+    }
+  },
+
+  "ui": {
+    "readMore":    { "ko": "자세히 보기",  "en": "Read more",    "zh": "查看详情", "ja": "詳しく見る" },
+    "viewDetail":  { "ko": "상세 보기",    "en": "View detail",  "zh": "查看详情", "ja": "詳細を見る" },
+    "loadMore":    { "ko": "뉴스 더 보기", "en": "More news",    "zh": "查看更多新闻", "ja": "ニュースをもっと見る" },
+    "all":         { "ko": "전체",         "en": "All",          "zh": "全部",     "ja": "すべて" },
+    "empty":       { "ko": "등록된 내용이 없습니다.", "en": "Nothing here yet.", "zh": "暂无内容。", "ja": "登録された内容がありません。" },
+    "apply":       { "ko": "지원하기",     "en": "Apply now",    "zh": "立即申请", "ja": "応募する" },
+    "applyModalTo":{ "ko": "받는사람",     "en": "To",           "zh": "收件人",   "ja": "宛先" },
+    "applySend":   { "ko": "메일 보내기",  "en": "Send email",   "zh": "发送邮件", "ja": "メールを送る" },
+    "applyCopy":   { "ko": "주소 복사",    "en": "Copy address", "zh": "复制地址", "ja": "アドレスをコピー" },
+    "applyCopied": { "ko": "복사됨",       "en": "Copied",       "zh": "已复制",   "ja": "コピーしました" },
+    "applyFallback":{ "ko": "메일 앱이 안 열리면 위 주소를 복사해 직접 보내주세요.", "en": "If your mail app doesn't open, copy the address above and send it manually.", "zh": "如果邮件应用未打开，请复制上方地址后手动发送。", "ja": "メールアプリが開かない場合は、上記のアドレスをコピーして手動で送信してください。" },
+    "backToNews":  { "ko": "뉴스 목록으로", "en": "Back to news", "zh": "返回新闻列表", "ja": "ニュース一覧へ" },
+    "viewOriginal":{ "ko": "원문 보기",    "en": "View original source", "zh": "查看原文", "ja": "原文を見る" },
+    "notFound":    { "ko": "요청하신 뉴스를 찾을 수 없습니다.", "en": "This article could not be found.", "zh": "未找到该新闻。", "ja": "該当の記事が見つかりません。" },
+    "share":       { "ko": "공유하기", "en": "Share", "zh": "分享", "ja": "共有" },
+    "shareCopied": { "ko": "링크가 복사되었습니다", "en": "Link copied", "zh": "链接已复制", "ja": "リンクをコピーしました" },
+    "sendMail":    { "ko": "클릭하면 메일 작성 창이 열립니다", "en": "Click to open your mail app", "zh": "点击即可撰写邮件", "ja": "クリックするとメール作成画面が開きます" },
+    "mailSubject": { "ko": "[문의] 센 엔지니어링그룹 홈페이지", "en": "[Inquiry] SEN Engineering Group", "zh": "[咨询] SEN 工程集团", "ja": "[お問い合わせ] SEN エンジニアリンググループ" }
+  },
+
+  "footer": {
+    "address": {
+      "ko": "서울시 영등포구 버드나루로19길 6 SENSE빌딩 (07226)",
+      "en": "6 Beodeunaru-ro 19-gil, Yeongdeungpo-gu, Seoul 07226, Korea",
+      "zh": "首尔特别市永登浦区 Beodeunaru-ro 19-gil 6号 SENSE 大厦 (07226)",
+      "ja": "ソウル市永登浦区バドゥナル路19ギル6 SENSEビル (07226)"
+    },
+    "tel": { "ko": "TEL +82 2 2629 3119 · FAX +82 2 2629 3110", "en": "TEL +82 2 2629 3119 · FAX +82 2 2629 3110", "zh": "TEL +82 2 2629 3119 · FAX +82 2 2629 3110", "ja": "TEL +82 2 2629 3119 · FAX +82 2 2629 3110" },
+    "copyright": { "ko": "© SEN Engineering Group. All rights reserved.", "en": "© SEN Engineering Group. All rights reserved.", "zh": "© SEN Engineering Group. All rights reserved.", "ja": "© SEN Engineering Group. All rights reserved." }
+  }
+}
