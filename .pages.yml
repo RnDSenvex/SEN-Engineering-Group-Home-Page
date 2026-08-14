@@ -1,0 +1,326 @@
+# ============================================================================
+#  Pages CMS 설정 파일  (https://pagescms.org)
+#  이 파일이 저장소 루트에 있어야 Pages CMS가 편집 화면을 만들어 줍니다.
+#
+#  ── 편집 가능한 것 ──
+#    ② 뉴스      : 새 뉴스 추가 (한국어만)
+#    ③ 채용      : 새 채용공고 추가 (한국어만)
+#    ④ 용어집    : 고유명사 표기 통일 (기사 번역에 사용)
+#    ⑤ 번역 요청 : ② 뉴스에 올린 글의 ID를 적고 "번역 시작"을 누르면
+#                  그 기사만 번역됨 (미번역 기사는 사이트 언어를 바꿔도
+#                  한국어 그대로 나옴 — 번역을 안 걸었을 뿐, 오류 아님)
+#    ⑥ 번역      : ⑤ 에서 번역된 결과 목록. 문구가 어색하면 여기서 직접 고침
+#
+#  프로젝트(실적) 데이터는 목록 폼이 아니라 아래 "미디어" 쪽 [프로젝트
+#  데이터] 에 있습니다 — 4,575건이라 폼으로 하나씩 펴서 보기엔 너무 많아서,
+#  파일을 통째로 내려받아 고친 뒤 다시 올려 덮어쓰는 방식으로 바꿨습니다.
+#
+#  회사 소개·연혁·주요공법·CONTACT·섹션 문구 등 나머지는 전부 고정값입니다.
+#  바꿔야 할 일이 생기면 content/*.json 파일을 직접 수정하세요.
+#  (예전에는 이것들도 CMS에 떠 있었지만, 실수로 건드리기 쉬워 걷어냈습니다)
+#
+#  다국어 필드는 { ko, en, zh, ja } 4칸입니다. 한국어만 채워도 되고,
+#  비워 둔 언어는 자동으로 한국어가 표시됩니다.
+#  (단, ② 뉴스 · ③ 채용공고는 번역을 손으로 같이 입력하지 않습니다 —
+#   ② 뉴스의 번역은 [⑤ 번역 요청]으로 요청해야 생기고 [⑥ 번역]에 저장되며,
+#   ③ 채용공고는 아예 번역하지 않기로 해서 한국어 한 칸만 있습니다.)
+# ============================================================================
+
+media:
+  - name: images
+    label: 이미지
+    input: uploads/images
+    output: /uploads/images
+    extensions: [jpg, jpeg, png, webp, gif, svg]
+
+  # 프로젝트(실적) 원본 데이터 — 4,575건이라 목록 폼 대신 파일을 통째로
+  # 내려받아 고치는 방식입니다. content/downloads/ 에는 이 파일만 있어서,
+  # 실수로 다른(구조화 폼으로 관리하는) 파일을 여기서 건드릴 위험이 없습니다.
+  #   1. 이 파일을 눌러 다운로드
+  #   2. projects 배열을 고침(추가/수정/삭제) — 형식은 파일을 열어 참고
+  #      {id: 고유값, address: "서울특별시 강남구"처럼 시/군/구 수준 공개
+  #      위치만, visible: true/false(꺼두면 삭제 없이 숨김)}
+  #   3. 같은 파일 이름(projects.json)으로 다시 올려 덮어쓰기
+  #   ⚠️ 이 저장소는 public 입니다 — 정확한 도로명·지번·건물명, 담당자
+  #      이름, 계약금액 같은 내부 정보는 절대 넣지 마세요.
+  - name: projects-data
+    label: 프로젝트 데이터
+    input: content/downloads
+    output: /content/downloads
+    extensions: [json]
+
+  # 홈페이지 맨 위 표지에서 서서히 넘어가는 사진들입니다.
+  #   1. 여기서 사진을 올립니다 — 파일 이름을 main_1.png, main_2.png,
+  #      main_3.png … 순서대로 붙이세요(숫자 사이 끊기면 그 뒤는 안
+  #      보입니다). 최대 10장(main_10)까지 됩니다.
+  #   2. 확장자는 png/jpg/jpeg/webp 중 아무거나 됩니다.
+  #   3. 사진을 바꾸려면 같은 이름으로 다시 올려 덮어쓰면 됩니다. 지우면
+  #      그 번호는 빠지고 나머지 번호 사진들로 이어집니다.
+  #   4. 한 장도 없으면 기본 사진 4장이 대신 나옵니다.
+  - name: main-photos
+    label: 표지 사진
+    input: uploads/main
+    output: /uploads/main
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+
+  # --------------------------------------------------------------------------
+  # ② 뉴스
+  #
+  #    한국어만 입력합니다. 번역(en/中文/日本語)은 여기서 손대지 않습니다 —
+  #    새 기사는 우선 여기 한국어로만 올리고, 번역이 필요하면 [⑤ 번역 요청]에서
+  #    이 기사의 ID를 적고 "번역 시작"을 누르세요. 결과는 content/news-i18n.json 에
+  #    쌓여 여기 title/excerpt 와 화면에서 자동으로 합쳐집니다. 번역을 손으로
+  #    고치고 싶으면 [⑥ 번역] 탭에서 하세요.
+  #
+  #    ⚠️ 이 목록은 저장할 때마다 화면에 있는 항목 전체로 통째로 바뀝니다
+  #    (부분 추가/병합이 아닙니다). 새 기사를 올릴 때는 반드시 목록 맨 아래
+  #    "추가" 버튼으로 새 항목만 넣고 저장하세요 — 기존 항목을 지우거나
+  #    직접 다시 입력하지 마세요. 지웠다면 git 기록에서 복구할 수 있습니다.
+  # --------------------------------------------------------------------------
+  - name: news
+    label: ② 뉴스
+    type: file
+    path: content/news.json
+    format: json
+    fields:
+      - name: items
+        label: 뉴스 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "[{category}] {title}"
+        fields:
+          - name: id
+            label: 고유 ID
+            type: string
+            required: true
+            description: >
+              영문·숫자·하이픈 (예 news-2026-09-award). 중복만 아니면 됩니다.
+              [⑥ 번역] 탭에서 번역을 연결할 때도 이 ID를 씁니다.
+          - name: date
+            label: 날짜
+            type: date
+            required: true
+          - name: category
+            label: 분류
+            type: select
+            options:
+              values:
+                - 언론보도
+                - 행사
+                - 홍보자료
+                - 논문
+                - 기술자료
+            description: >
+              번역하지 않고 이 한국어 표기가 모든 언어에 그대로 쓰입니다.
+          - name: image
+            label: 썸네일
+            type: image
+            description: 비워 두면 블루 그라디언트가 표시됩니다.
+          - name: link
+            label: 원문 링크 (선택)
+            type: string
+            description: >
+              언론사 기사 등 외부 원문이 있으면 적어 주세요.
+              카드를 누르면 항상 이 사이트 안의 상세 페이지가 먼저 열리고,
+              그 페이지 안에 "원문 보기" 버튼으로 표시됩니다. 비워도 됩니다.
+          - name: title
+            label: 제목 (한국어)
+            type: string
+            required: true
+          - name: excerpt
+            label: 요약 (한국어)
+            type: text
+            required: true
+
+  # --------------------------------------------------------------------------
+  # ③ 채용공고
+  #
+  #    번역 없이 한국어로만 입력합니다. 홈페이지의 다른 언어(EN/中文/日本語)로
+  #    보더라도 채용공고 내용은 항상 이 한국어 그대로 표시됩니다
+  #    (사이트의 다국어 표시 방식이 원래 "값이 비어 있으면 한국어로 대체"라,
+  #    다른 언어 칸을 아예 안 만들면 자동으로 이렇게 동작합니다).
+  #
+  #    ⚠️ 이 파일의 필드는 아래 두 개(지원 접수 이메일·채용공고)뿐입니다.
+  #    "채용" 섹션 제목·문구·버튼 라벨 등은 content/site.json 의 careers
+  #    쪽에 따로 있습니다 — 예전엔 여기 content/careers.json 안에 같이
+  #    있었는데, 이 폼을 저장할 때마다 폼에 없는 값까지 통째로 지워지는
+  #    사고가 있어서(2026-08-13) CMS가 손대지 않는 파일로 옮겼습니다.
+  # --------------------------------------------------------------------------
+  - name: careers
+    label: ③ 채용공고
+    type: file
+    path: content/careers.json
+    format: json
+    fields:
+      - name: applyEmail
+        label: 지원 접수 이메일 (전체 기본값)
+        type: string
+      - name: jobs
+        label: 채용공고
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: 고유 ID
+            type: string
+            required: true
+            description: 영문·숫자·하이픈 (예 job-2026-structure).
+          - name: email
+            label: 이 공고 전용 접수 메일
+            type: string
+            description: 비워 두면 위의 기본 접수 이메일을 씁니다.
+          - name: deadline
+            label: 마감일
+            type: date
+            description: 비워 두면 마감 배지가 표시되지 않습니다 (상시채용).
+          - name: title
+            label: 공고명
+            type: string
+            required: true
+          - name: team
+            label: 소속
+            type: string
+          - name: type
+            label: 고용형태
+            type: string
+            description: "예: 정규직 / 계약직 / 인턴"
+          - name: location
+            label: 근무지
+            type: string
+          - name: description
+            label: 담당 업무
+            type: text
+          - name: requirements
+            label: 자격 요건
+            type: string
+            list: true
+          - name: preferred
+            label: 우대 사항
+            type: string
+            list: true
+
+  # --------------------------------------------------------------------------
+  # ④ 용어집 — 고유명사 표기 통일
+  #
+  #    기사를 4개 국어로 번역할 때 회사명·공법명·기관명 같은 고유명사가
+  #    번역기마다 다르게 나오는 것을 막기 위한 표입니다.
+  #    번역 도구는 이 표에 있는 말을 반드시 여기 적힌 표기 그대로 씁니다.
+  #
+  #    ※ 원본은 이 JSON 입니다. 엑셀은 여기서 뽑아 쓰는 사본일 뿐이니,
+  #      엑셀만 고치면 사이트에 반영되지 않습니다.
+  # --------------------------------------------------------------------------
+  - name: glossary
+    label: ④ 용어집
+    type: file
+    path: content/glossary.json
+    format: json
+    fields:
+      - name: terms
+        label: 고유명사 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{ko}"
+        fields:
+          - name: ko
+            label: 한국어
+            type: string
+            required: true
+          - name: en
+            label: English
+            type: string
+            required: true
+          - name: ja
+            label: 日本語
+            type: string
+            required: true
+          - name: zh
+            label: 中文
+            type: string
+            required: true
+
+  # --------------------------------------------------------------------------
+  # ⑤ 번역 요청 — [② 뉴스]에 올린 글의 ID를 적고 "번역 시작"을 누르세요
+  #
+  #    글 자체는 여기서 쓰지 않습니다 (한국어 본문은 이미 [② 뉴스]에 있음).
+  #    요청 항목을 저장한 뒤 열어서 "번역 시작" 버튼을 누르면 GitHub Actions가
+  #    용어집을 참고해 그 기사만 영어·일본어·중국어로 번역합니다. 끝나면
+  #    이 목록에서 그 항목은 사라지고 [⑥ 번역]에 결과가 나타납니다.
+  #    번역까지 1~2분 걸립니다.
+  # --------------------------------------------------------------------------
+  - name: translate-queue
+    label: ⑤ 번역 요청
+    type: collection
+    path: translate-queue
+    exclude: [README.md]
+    view:
+      fields: [newsId]
+    fields:
+      - name: newsId
+        label: 번역할 기사 ID
+        type: string
+        required: true
+        description: >
+          [② 뉴스] 항목의 "고유 ID"를 그대로 복사해서 붙여넣으세요.
+          철자가 다르면 번역이 실패합니다.
+    actions:
+      - name: translate
+        label: 번역 시작
+        scope: entry
+        workflow: translate-queue.yml
+        confirm:
+          title: 이 기사를 번역할까요?
+          message: >
+            용어집을 참고해 영어·일본어·중국어로 번역한 뒤 [⑥ 번역]에 넣고,
+            이 요청 항목은 사라집니다. 1~2분 걸립니다.
+          button: 번역 시작
+
+  # --------------------------------------------------------------------------
+  # ⑥ 번역 — 뉴스 en/中文/日本語 손보기
+  #
+  #    [⑤ 번역 요청]에서 "번역 시작"을 누르면 자동 번역돼 여기 채워집니다.
+  #    번역이 어색하면 여기서 직접 고치세요. ID는 [② 뉴스]의 "고유 ID"와
+  #    똑같아야 그 글에 연결됩니다 (다르면 화면에 반영되지 않습니다).
+  #    항목을 새로 만들 필요는 거의 없습니다 — [⑤ 번역 요청]이 이미 다 채워 줍니다.
+  # --------------------------------------------------------------------------
+  - name: news-i18n
+    label: ⑥ 번역
+    type: file
+    path: content/news-i18n.json
+    format: json
+    fields:
+      - name: items
+        label: 뉴스 번역 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{id}"
+        fields:
+          - name: id
+            label: 연결할 뉴스 ID
+            type: string
+            required: true
+            description: "[② 뉴스] 항목의 \"고유 ID\"와 정확히 같아야 합니다."
+          - name: title
+            label: 제목 번역
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: zh, label: 中文,    type: string }
+              - { name: ja, label: 日本語,  type: string }
+          - name: excerpt
+            label: 요약 번역
+            type: object
+            fields:
+              - { name: en, label: English, type: text }
+              - { name: zh, label: 中文,    type: text }
+              - { name: ja, label: 日本語,  type: text }
