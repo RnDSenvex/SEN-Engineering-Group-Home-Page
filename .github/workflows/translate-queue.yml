@@ -1,0 +1,97 @@
+# ============================================================================
+#  기사 번역 — Actions 탭 "Run workflow" 로 손으로 돌립니다 (news_id 입력)
+#
+#  글 자체는 [① 뉴스]에 한국어로 먼저 올립니다. 번역이 필요하면 이 저장소의
+#  Actions 탭 → "기사 번역" → Run workflow → news_id 칸에 그 글의 "고유 ID"를
+#  적고 실행하세요. content/news-i18n.json 에 번역을 기록하고 커밋합니다 —
+#  결과는 [② 뉴스 번역] 탭에 나타납니다.
+#
+#  (예전엔 Pages CMS의 "번역 요청" 탭에서 버튼으로 실행했지만, 그 탭은
+#  없앴습니다 — payload 입력은 그 시절의 흔적이라 지금은 안 씁니다.)
+#
+#  API 키는 저장소 Settings → Secrets and variables → Actions →
+#  Repository secrets 의 OPENAI_API_KEY 에서 가져옵니다.
+#  이 값은 GitHub 서버 안에서만 풀리며, 공개 저장소라도 외부에 노출되지 않습니다.
+#  로그에도 자동으로 가려집니다(***).
+# ============================================================================
+name: 기사 번역
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'Pages CMS가 자동으로 채웁니다 (entry action payload, JSON)'
+        required: false
+        type: string
+      news_id:
+        description: 'Actions 탭에서 손으로 돌릴 때만 — 번역할 기사의 고유 ID'
+        required: false
+        type: string
+
+# content/news.json 을 고쳐 커밋해야 하므로 쓰기 권한이 필요합니다
+permissions:
+  contents: write
+
+# 여러 요청이 겹쳐 들어와도 커밋이 꼬이지 않도록 한 번에 하나씩
+concurrency:
+  group: translate-queue
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 의존성 설치
+        run: pip install --quiet openai
+
+      - name: 번역
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SEN_TRANSLATE_MODEL: ${{ vars.SEN_TRANSLATE_MODEL }}
+          SEN_TRANSLATE_BASE_URL: ${{ vars.SEN_TRANSLATE_BASE_URL }}
+          PAYLOAD: ${{ inputs.payload }}
+          NEWS_ID: ${{ inputs.news_id }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::OPENAI_API_KEY 시크릿이 없습니다. Settings → Secrets and variables → Actions 에 등록하세요."
+            exit 1
+          fi
+          if [ -n "$NEWS_ID" ]; then
+            python tools/translate_by_id.py --news-id "$NEWS_ID"
+          elif [ -n "$PAYLOAD" ]; then
+            python tools/translate_by_id.py --payload "$PAYLOAD"
+          else
+            echo "::error::payload 도 news_id 도 없습니다."
+            exit 1
+          fi
+
+      - name: 커밋
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/news-i18n.json
+          if git diff --cached --quiet; then
+            echo "바뀐 내용이 없습니다."
+            exit 0
+          fi
+          git commit -m "chore: 기사 번역 자동 반영 [skip ci]"
+
+          # Pages CMS나 다른 자동 커밋(뉴스 목록 컴파일 등)이 같은 타이밍에
+          # main에 커밋을 넣을 수 있어서, push가 그 사이 밀린 커밋 때문에
+          # 거절될 수 있습니다. 실패하면 새로 받아 rebase 하고 재시도합니다.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "push 실패 — 새 커밋을 받아 다시 시도합니다 ($i/5)"
+            git fetch origin main
+            git rebase origin/main
+          done
+          echo "::error::여러 번 재시도했지만 push에 계속 실패했습니다."
+          exit 1

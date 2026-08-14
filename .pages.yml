@@ -1,0 +1,307 @@
+# ============================================================================
+#  Pages CMS 설정 파일  (https://pagescms.org)
+#  이 파일이 저장소 루트에 있어야 Pages CMS가 편집 화면을 만들어 줍니다.
+#
+#  ── 콘텐츠(목록 폼) ──
+#    ① 뉴스      : 새 뉴스 추가 (한국어만)
+#    ② 뉴스 번역 : ①의 영어·중국어·일본어 번역. 어색하면 여기서 직접 고침
+#                  (새 번역을 자동으로 만들려면 저장소 Actions 탭 →
+#                  "기사 번역" → Run workflow 에서 손으로 돌리세요.
+#                  news_id 칸에 ①의 "고유 ID"를 적으면 됩니다.)
+#    ③ 채용공고  : 새 채용공고 추가 (한국어만)
+#    ④ 용어집    : 고유명사 표기 통일 (기사 번역에 사용)
+#
+#  ── 미디어(파일 업로드) ──
+#    ① 프로젝트 데이터 : 실적 4,575건 — 파일을 통째로 내려받아 고친 뒤
+#                        다시 올려 덮어쓰는 방식입니다.
+#    ② 이미지          : 뉴스 썸네일 등 일반 이미지
+#    ③ 표지 사진        : 홈페이지 맨 위 표지에서 서서히 넘어가는 사진들
+#
+#  회사 소개·연혁·주요공법·CONTACT·섹션 문구 등 나머지는 전부 고정값입니다.
+#  바꿔야 할 일이 생기면 content/*.json 파일을 직접 수정하세요.
+#  (예전에는 이것들도 CMS에 떠 있었지만, 실수로 건드리기 쉬워 걷어냈습니다)
+#
+#  다국어 필드는 { ko, en, zh, ja } 4칸입니다. 한국어만 채워도 되고,
+#  비워 둔 언어는 자동으로 한국어가 표시됩니다.
+#  (단, ① 뉴스 · ③ 채용공고는 번역을 손으로 같이 입력하지 않습니다 —
+#   ① 뉴스의 번역은 ② 뉴스 번역에 따로 있고, ③ 채용공고는 아예
+#   번역하지 않기로 해서 한국어 한 칸만 있습니다.)
+# ============================================================================
+
+media:
+  # ① 프로젝트(실적) 원본 데이터 — 4,575건이라 목록 폼 대신 파일을 통째로
+  # 내려받아 고치는 방식입니다. content/downloads/ 에는 이 파일만 있어서,
+  # 실수로 다른(구조화 폼으로 관리하는) 파일을 여기서 건드릴 위험이 없습니다.
+  #   1. 이 파일을 눌러 다운로드
+  #   2. projects 배열을 고침(추가/수정/삭제) — 형식은 파일을 열어 참고
+  #      {id: 고유값, address: "서울특별시 강남구"처럼 시/군/구 수준 공개
+  #      위치만, visible: true/false(꺼두면 삭제 없이 숨김)}
+  #   3. 같은 파일 이름(projects.json)으로 다시 올려 덮어쓰기
+  #   ⚠️ 이 저장소는 public 입니다 — 정확한 도로명·지번·건물명, 담당자
+  #      이름, 계약금액 같은 내부 정보는 절대 넣지 마세요.
+  - name: projects-data
+    label: ① 프로젝트 데이터
+    input: content/downloads
+    output: /content/downloads
+    extensions: [json]
+
+  - name: images
+    label: ② 이미지
+    input: uploads/images
+    output: /uploads/images
+    extensions: [jpg, jpeg, png, webp, gif, svg]
+
+  # ③ 홈페이지 맨 위 표지에서 서서히 넘어가는 사진들입니다.
+  #   1. 여기서 사진을 올립니다 — 파일 이름을 main_1.png, main_2.png,
+  #      main_3.png, main_4.png 순서대로 붙이세요(숫자 사이 끊기면 그
+  #      뒤는 안 보입니다). 최대 4장까지 됩니다.
+  #   2. 확장자는 png/jpg/jpeg/webp 중 아무거나 됩니다.
+  #   3. 사진을 바꾸려면 같은 이름으로 다시 올려 덮어쓰면 됩니다. 지우면
+  #      그 번호는 빠지고 나머지 번호 사진들로 이어집니다.
+  #   4. 한 장도 없으면 기본 사진 4장이 대신 나옵니다.
+  - name: main-photos
+    label: ③ 표지 사진
+    input: uploads/main
+    output: /uploads/main
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+
+  # --------------------------------------------------------------------------
+  # ① 뉴스
+  #
+  #    한국어만 입력합니다. 번역(en/中文/日本語)은 여기서 손대지 않습니다 —
+  #    새 기사는 우선 여기 한국어로만 올리고, 번역이 필요하면 저장소 Actions
+  #    탭 → "기사 번역" → Run workflow 에서 이 기사의 고유 ID를 적어 손으로
+  #    돌리세요. 결과는 content/news-i18n.json 에 쌓여 여기 title/excerpt 와
+  #    화면에서 자동으로 합쳐집니다. 번역을 손으로 고치고 싶으면
+  #    [② 뉴스 번역] 탭에서 하세요.
+  #
+  #    기사 하나가 파일 하나(content/news/<고유 ID>.json)입니다 — 그래서
+  #    목록이 표(쪽번호 포함, 25개씩)로 보이고, 최신 날짜 순으로 자동
+  #    정렬되고, 추가·삭제·수정이 각각 독립적으로 됩니다(예전처럼 전체
+  #    목록을 통째로 저장하지 않으니 실수로 다른 기사를 건드릴 걱정이
+  #    없습니다). 실제 홈페이지가 읽는 content/news.json 은 이 폴더가
+  #    바뀔 때마다 GitHub Actions가 자동으로 다시 만들어 줍니다 — 그
+  #    파일은 직접 손대지 마세요.
+  # --------------------------------------------------------------------------
+  - name: news
+    label: ① 뉴스
+    type: collection
+    path: content/news
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      fields: [date, category, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: id
+        label: 고유 ID
+        type: string
+        required: true
+        description: >
+          영문·숫자·하이픈 (예 news-2026-09-award). 중복만 아니면 됩니다.
+          [② 뉴스 번역] 탭에서 번역을 연결할 때도 이 ID를 씁니다.
+          (한 번 정하면 나중에 바꾸지 마세요 — 이 값이 곧 파일 이름입니다.)
+      - name: date
+        label: 날짜
+        type: date
+        required: true
+      - name: category
+        label: 분류
+        type: select
+        options:
+          values:
+            - 언론보도
+            - 행사
+            - 홍보자료
+            - 논문
+            - 기술자료
+        description: >
+          번역하지 않고 이 한국어 표기가 모든 언어에 그대로 쓰입니다.
+      - name: image
+        label: 썸네일
+        type: image
+        description: 비워 두면 블루 그라디언트가 표시됩니다.
+      - name: link
+        label: 원문 링크 (선택)
+        type: string
+        description: >
+          언론사 기사 등 외부 원문이 있으면 적어 주세요.
+          카드를 누르면 항상 이 사이트 안의 상세 페이지가 먼저 열리고,
+          그 페이지 안에 "원문 보기" 버튼으로 표시됩니다. 비워도 됩니다.
+      - name: title
+        label: 제목 (한국어)
+        type: string
+        required: true
+      - name: excerpt
+        label: 요약 (한국어)
+        type: text
+        required: true
+
+  # --------------------------------------------------------------------------
+  # ② 뉴스 번역 — 뉴스 en/中文/日本語 손보기
+  #
+  #    새 번역은 저장소 Actions 탭 → "기사 번역" → Run workflow 에서
+  #    ① 뉴스 항목의 "고유 ID"를 넣고 손으로 돌리면 자동으로 채워집니다.
+  #    번역이 어색하면 여기서 직접 고치세요. ID는 [① 뉴스]의 "고유 ID"와
+  #    똑같아야 그 글에 연결됩니다 (다르면 화면에 반영되지 않습니다).
+  # --------------------------------------------------------------------------
+  - name: news-i18n
+    label: ② 뉴스 번역
+    type: file
+    path: content/news-i18n.json
+    format: json
+    fields:
+      - name: items
+        label: 뉴스 번역 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{id}"
+        fields:
+          - name: id
+            label: 연결할 뉴스 ID
+            type: string
+            required: true
+            description: "[① 뉴스] 항목의 \"고유 ID\"와 정확히 같아야 합니다."
+          - name: title
+            label: 제목 번역
+            type: object
+            fields:
+              - { name: en, label: English, type: string }
+              - { name: zh, label: 中文,    type: string }
+              - { name: ja, label: 日本語,  type: string }
+          - name: excerpt
+            label: 요약 번역
+            type: object
+            fields:
+              - { name: en, label: English, type: text }
+              - { name: zh, label: 中文,    type: text }
+              - { name: ja, label: 日本語,  type: text }
+
+  # --------------------------------------------------------------------------
+  # ③ 채용공고
+  #
+  #    번역 없이 한국어로만 입력합니다. 홈페이지의 다른 언어(EN/中文/日本語)로
+  #    보더라도 채용공고 내용은 항상 이 한국어 그대로 표시됩니다
+  #    (사이트의 다국어 표시 방식이 원래 "값이 비어 있으면 한국어로 대체"라,
+  #    다른 언어 칸을 아예 안 만들면 자동으로 이렇게 동작합니다).
+  #
+  #    ⚠️ 이 파일의 필드는 아래 두 개(지원 접수 이메일·채용공고)뿐입니다.
+  #    "채용" 섹션 제목·문구·버튼 라벨 등은 content/site.json 의 careers
+  #    쪽에 따로 있습니다 — 예전엔 여기 content/careers.json 안에 같이
+  #    있었는데, 이 폼을 저장할 때마다 폼에 없는 값까지 통째로 지워지는
+  #    사고가 있어서(2026-08-13) CMS가 손대지 않는 파일로 옮겼습니다.
+  # --------------------------------------------------------------------------
+  - name: careers
+    label: ③ 채용공고
+    type: file
+    path: content/careers.json
+    format: json
+    fields:
+      - name: applyEmail
+        label: 지원 접수 이메일 (전체 기본값)
+        type: string
+      - name: jobs
+        label: 채용공고
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: 고유 ID
+            type: string
+            required: true
+            description: 영문·숫자·하이픈 (예 job-2026-structure).
+          - name: email
+            label: 이 공고 전용 접수 메일
+            type: string
+            description: 비워 두면 위의 기본 접수 이메일을 씁니다.
+          - name: deadline
+            label: 마감일
+            type: date
+            description: 비워 두면 마감 배지가 표시되지 않습니다 (상시채용).
+          - name: title
+            label: 공고명
+            type: string
+            required: true
+          - name: team
+            label: 소속
+            type: string
+          - name: type
+            label: 고용형태
+            type: string
+            description: "예: 정규직 / 계약직 / 인턴"
+          - name: location
+            label: 근무지
+            type: string
+          - name: description
+            label: 담당 업무
+            type: text
+          - name: requirements
+            label: 자격 요건
+            type: string
+            list: true
+          - name: preferred
+            label: 우대 사항
+            type: string
+            list: true
+
+  # --------------------------------------------------------------------------
+  # ④ 용어집 — 고유명사 표기 통일 (뉴스와 같은 방식: 항목 하나당 파일 하나)
+  #
+  #    기사를 4개 국어로 번역할 때 회사명·공법명·기관명 같은 고유명사가
+  #    번역기마다 다르게 나오는 것을 막기 위한 표입니다.
+  #    번역 도구는 이 표에 있는 말을 반드시 여기 적힌 표기 그대로 씁니다.
+  #
+  #    예전에는 용어 전체가 파일 하나(content/glossary.json)에 들어 있어서,
+  #    아무 항목이나 하나 고쳐 저장해도 폼에 없는 값까지 통째로 다시 쓰여
+  #    사고 위험이 있었습니다(뉴스에서 먼저 겪은 문제). 뉴스처럼 항목마다
+  #    파일 하나로 나눠서 그 위험을 없앴습니다.
+  #
+  #    실제 번역 도구(tools/translate_common.py)가 읽는 content/glossary.json
+  #    은 이 폴더가 바뀔 때마다 GitHub Actions가 자동으로 다시 만들어 줍니다
+  #    — 그 파일은 직접 손대지 마세요.
+  # --------------------------------------------------------------------------
+  - name: glossary
+    label: ④ 용어집
+    type: collection
+    path: content/glossary
+    format: json
+    filename: "{fields.id}.json"
+    view:
+      fields: [ko, en]
+      default:
+        sort: ko
+        order: asc
+    fields:
+      - name: id
+        label: 고유 ID
+        type: string
+        required: true
+        description: >
+          영문·숫자·하이픈 (예 psrc-method). 중복만 아니면 됩니다.
+          (한 번 정하면 나중에 바꾸지 마세요 — 이 값이 곧 파일 이름입니다.)
+      - name: ko
+        label: 한국어
+        type: string
+        required: true
+      - name: en
+        label: English
+        type: string
+        required: true
+      - name: ja
+        label: 日本語
+        type: string
+        required: true
+      - name: zh
+        label: 中文
+        type: string
+        required: true
+
