@@ -14,6 +14,9 @@
      완전 흰색으로 통일. 예전엔 연한 회색(#f5f5f7)이었습니다. */
   --paper:   #ffffff;
   --paper-2: #e8e8ed;
+  /* 섹션이 전부 순백색이면 9화면을 끊김 없는 흰 벽으로 내려가게 됩니다.
+     같은 밝은 계열 안에서 아주 옅은 단계를 하나 만들어 번갈아 씁니다. */
+  --paper-tint: #f6f7f9;
   --ink:     #1d1d1f;
   --dim:     #6e6e73;
   --blue:    #0071e3;
@@ -62,6 +65,26 @@ body {
 /* 밝은 장면 (회사소개·프로젝트·뉴스·채용) */
 .scene--paper { background: var(--paper); }
 .scene--paper .scene__inner { color: var(--ink); }
+
+/* ---------- 섹션 리듬 ----------
+   예전에는 일곱 섹션이 전부 같은 배경·같은 여백·같은 제목 크기였습니다.
+   그게 "AI가 찍어낸 페이지" 인상의 가장 큰 원인이었습니다.
+   배경을 번갈아 깔고, 여는 섹션과 닫는 섹션에 다른 무게를 줍니다. */
+.scene--tint { background: var(--paper-tint); }
+.scene--tint .scene__inner { color: var(--ink); }
+
+/* 배경이 바뀌면 경계선이 필요 없습니다 — 색이 이미 경계입니다 */
+.scene--tint + .scene,
+.scene + .scene--tint { border-top: 0; }
+
+/* 회사소개는 본문의 첫 장이라 위를 넉넉히 열어 줍니다 */
+.scene--opening { padding-top: clamp(64px, 9vh, 116px); }
+/* CONTACT 는 주소 목록이라 조용히 지나가면 됩니다 */
+.scene--tight { padding-bottom: clamp(48px, 6vh, 80px); }
+/* 지도·지구본은 폭을 더 씁니다 */
+.scene--wide .scene__inner { width: min(1320px, 94vw); }
+/* 채용은 마지막이라 푸터와 붙지 않게 아래를 띄웁니다 */
+.scene--closing { padding-bottom: clamp(88px, 12vh, 150px); }
 
 /* ---------- 표지 (첫 화면, 사진 크로스페이드) ----------
    본문(main) 앞에 화면 전체를 채운 채 고정되어(position:fixed) 배경처럼
@@ -129,8 +152,22 @@ body {
   .cover__bg img:first-child { opacity: 1; }
 }
 @media (max-width: 640px) {
-  .cover__vision { max-width: none; }
+  /* 좁은 화면에서는 비전 문구가 고정 헤더(.topbar)와 겹칠 만큼 위쪽에
+     붙어 있어서 살짝 내려주고, 그룹명은 화면 아래 대신 정중앙으로
+     옮깁니다(PC 레이아웃은 이 미디어쿼리 밖이라 그대로 유지됩니다). */
+  .cover__vision { max-width: none; margin-top: clamp(48px, 12vh, 88px); }
   .cover__row { justify-content: flex-start; }
+  .cover__brand {
+    /* width:100%(위 기본 규칙)가 그대로 남아있으면 left·width·right가
+       한꺼번에 지정된 꼴이 되어 브라우저가 right를 무시하고 width를
+       우선시킵니다 — 그 결과 fitBrand()가 계산한 폭(.cover__foot 기준,
+       좌우 여백만큼 좁음)과 실제 박스 폭(전체 폭)이 어긋나 글자가
+       의도보다 작게 보였습니다. width:auto로 그 충돌을 없앱니다. */
+    position: absolute; width: auto;
+    top: 50%; left: clamp(20px, 3.4vw, 46px); right: clamp(20px, 3.4vw, 46px);
+    transform: translateY(-50%);
+    text-align: center;
+  }
 }
 
 /* 표지 바로 다음(본문 전체)을 표지 높이만큼 내려서 시작시킵니다 —
@@ -189,7 +226,10 @@ body {
 
 .ltf__lead {
   margin: 1.5rem auto 0; max-width: 46ch;
-  text-align: center; font-size: calc(1rem + 5pt); line-height: 1.7; color: var(--dim);
+  text-align: center; color: var(--dim);
+  /* .scene__lead(회사소개 등 섹션 리드문)과 글자 크기를 맞췄습니다.
+     PC·모바일 구분 없이 같은 clamp() 값이라 화면 폭이 같으면 항상 같게 보입니다. */
+  font-size: clamp(.95rem, 1.2vw, 1.08rem); line-height: 1.75;
 }
 
 /* ---------- 상태 배지 (채용중 / 새 소식) ---------- */
@@ -231,14 +271,28 @@ body {
 }
 
 /* ---------- 상단 고정 네비 ----------
-   로고·언어만 남아서 항상 투명 배경 + 어두운 글자로 고정했습니다
+   로고·언어만 남아서 항상 흰 배경 + 어두운 글자로 고정했습니다
    (예전엔 어두운 인트로 위에서 흰 글자 ↔ 밝은 장면에서 흰 배경으로 바뀌었지만,
-   이제 사이트 전체가 밝은 배경이라 그 구분이 필요 없습니다). */
+   이제 사이트 전체가 밝은 배경이라 그 구분이 필요 없습니다). PC·모바일
+   구분 없이 항상 불투명해서, 아래로 스크롤되는 내용 위에 겹쳐도 글자가
+   묻히지 않습니다. */
 .topbar {
   position: fixed; inset: 0 0 auto 0; z-index: 60;
   display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
   padding: 16px clamp(20px, 4vw, 48px);
-  color: var(--ink);
+  background: var(--paper); color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  transition: opacity .3s ease, transform .3s ease;
+}
+/* 표지(.cover)가 있는 페이지(index.html)에서는 atlas.js가 부팅 시
+   .is-gated를 붙여, 표지를 지나 본문이 화면을 덮기 전까지는 헤더를
+   숨겨 둡니다(로고·언어 둘 다). .cover가 없는 서브 페이지(news.html
+   등)는 이 클래스가 안 붙어서 항상 그대로 보입니다. PC·모바일 구분
+   없이 동일하게 적용됩니다. */
+.topbar.is-gated { opacity: 0; transform: translateY(-8px); pointer-events: none; }
+.topbar.is-gated.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .topbar { transition: none; }
 }
 
 .topbar__logo { display: inline-flex; align-items: center; }
@@ -248,7 +302,7 @@ body {
 .lang { position: relative; margin-left: auto; }
 .lang__btn {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: .82rem; font-weight: 700; color: inherit;
+  font-size: var(--fs-xs); font-weight: 700; color: inherit;
   padding: 6px 11px; border-radius: 999px;
   border: 1px solid currentColor; opacity: .8;
 }
@@ -265,7 +319,7 @@ body {
 .lang.is-open .lang__menu { opacity: 1; visibility: visible; transform: none; }
 .lang__menu button {
   text-align: left; padding: 8px 12px; border-radius: 8px;
-  font-size: .86rem; color: var(--ink); width: 100%;
+  font-size: var(--fs-small); color: var(--ink); width: 100%;
 }
 /* --paper가 흰색이라 메뉴 배경(#fff)과 구분이 안 돼 --line으로 표시 */
 .lang__menu button:hover { background: var(--line); }
@@ -288,15 +342,29 @@ body {
   font-size: 11px; letter-spacing: .28em; color: var(--blue);
   font-weight: 800; margin-bottom: 12px;
 }
+/* 예전에는 모든 섹션 제목이 똑같이 56px 이었습니다. 크기가 같으면
+   무엇이 중요한 장인지 알 수 없어 전부 같은 무게로 읽힙니다.
+   기본은 낮추고, 본문을 여는 회사소개에만 큰 크기를 씁니다. */
 .scene__title {
   font-weight: 900; letter-spacing: -.03em; line-height: 1.14;
-  font-size: clamp(28px, 4.4vw, 56px); color: var(--ink);
+  font-size: clamp(26px, 3.3vw, 42px); color: var(--ink);
 }
+.scene--opening .scene__title { font-size: clamp(30px, 4.4vw, 56px); }
 .scene__title em { font-style: normal; color: var(--blue); }
 .scene__lead {
   margin-top: 14px; max-width: 62ch; color: var(--dim);
   font-size: clamp(.95rem, 1.2vw, 1.08rem); line-height: 1.75;
 }
+/* 회사소개 리드문만 예외 — 바로 아래 CEO 영상(.ceo__video)이 폭 전체를
+   쓰는데 이 문장만 62ch로 좁게 잡혀 있어 왼쪽에 몰린 것처럼 보였습니다.
+   영상과 같은 폭(=.scene__inner 전체)까지 늘립니다. */
+#scene-about .scene__lead { max-width: none; }
+/* 프로젝트·회사소개·채용 리드문은 한 줄에 한 문장씩 끊어 보여줍니다 —
+   data-bind는 순수 텍스트라 줄바꿈 문자(\n)를 그대로 두면 기본은 한 줄로
+   뭉치므로, 여기서만 있는 그대로 보이게 합니다. */
+#scene-projects .scene__lead,
+#scene-about .scene__lead,
+#scene-careers .scene__lead { white-space: pre-line; }
 
 /* 예전 무대 방식에서 쓰던 안쪽 스크롤 칸.
    지금은 페이지가 통째로 스크롤되므로 높이를 제한하지 않고 그대로 흐르게 둡니다. */
@@ -428,8 +496,9 @@ body {
 .pager__page {
   display: grid; place-items: center; min-width: 38px; height: 38px; padding: 0 6px;
   border-radius: 999px; border: 1px solid var(--line);
-  font-size: .88rem; font-weight: 700; color: var(--ink);
+  font-size: var(--fs-small); font-weight: 700; color: var(--ink);
   transition: border-color .2s, color .2s, background .2s;
 }
 .pager__page:hover { border-color: var(--blue); color: var(--blue); }
 .pager__page.is-on { background: var(--blue); border-color: var(--blue); color: #fff; }
+
