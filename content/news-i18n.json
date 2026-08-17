@@ -3,14 +3,14 @@
     {
       "id": "news-2026-09-01",
       "title": {
-        "en": "PSRC Standards Implemented",
+        "en": "PSRC Standard Implementation",
         "ja": "PSRC基準を搭載",
-        "zh": "搭载PSRC标准"
+        "zh": "集成 PSRC 标准"
       },
       "excerpt": {
-        "en": "The PSRC standard has been incorporated.",
+        "en": "PSRC design standards have been added.",
         "ja": "PSRC基準が搭載されました。",
-        "zh": "已搭载PSRC标准。"
+        "zh": "已集成 PSRC 标准。"
       }
     },
     {
