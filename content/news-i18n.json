@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-2026-09-01",
+      "title": {
+        "en": "PSRC Standards Implemented",
+        "ja": "PSRC基準を搭載",
+        "zh": "搭载PSRC标准"
+      },
+      "excerpt": {
+        "en": "The PSRC standard has been incorporated.",
+        "ja": "PSRC基準が搭載されました。",
+        "zh": "已搭载PSRC标准。"
+      }
+    },
+    {
       "id": "news-2026-08-12-psrc-method-included-in-singapore-buildi",
       "title": {
         "en": "PSRC Method Included in Singapore Building Design Standards",
@@ -116,9 +129,6 @@
         "zh": "在此填写新闻摘要。此条目为演示 Pages CMS 结构的示例数据。",
         "ja": "ここにニュースの要約を書きます。この項目は Pages CMS の構造を示すダミーデータです。"
       }
-    },
-    {
-      "id": "news-2026-09-01"
     }
   ]
 }
