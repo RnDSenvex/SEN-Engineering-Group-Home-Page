@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "paper_2024_3",
+      "title": {
+        "en": "Flexural Behavior of Prestressed Concrete Embedded Steel Composite Beams with Hollow Cores [Journal of Korean Society of Steel Construction] (2023.10)",
+        "ja": "中空コアを有するプレストレストコンクリート埋込み鋼合成梁の曲げ挙動［韓国鋼構造学会論文集］（2023.10）",
+        "zh": "具有中空芯的预应力混凝土埋入式钢组合梁的抗弯性能[韩国钢结构学会论文集](2023.10)"
+      },
+      "excerpt": {
+        "en": "Authors: Tae-Sung Eom, Jong-Jin Lim, Sung-Hwan Moon, Sung-Hwan Yoon, Jae-Chul Jeong\n\nAbstract: This study investigated the flexural behavior of prestressed concrete-encased steel composite beams (PSC composite beam) with hollow core. The PSC composite section consisted of the precast composite element, made of a steel section (H or box section) and U-shaped concrete encasement, and the cast-in-place concrete slab. By prestressing strands at the bottom of the precast element, the cracking resistance was enhanced. In addition, a void was formed in the web to reduce the beam weight. Six full-scale PSC composite beams were tested under positive bending and their flexural behaviors before and after casting the cast-in-place slab were investigated. The test results have shown that the initial strains of the steel section and reinforcing bars that occurred at the prestressing stage agreed well with the predictions by the existing PSC design theory. During the subsequent flexural testing, all beams failed by concrete crushing at the compression end or slab. The stiffness and strength of the PSC composite beams agreed well with the effective stiffness and plastic moment strength for encased composite members, respectively, calculated in accordance with AISC 360-16. At the interface with the cast-in-place slab, relative slip did not occur, and the interface shear resistance was provided by both the vertical stirrups of the precast concrete encasement and headed studs of the steel element engaged or embedded within the slab.",
+        "ja": "著者：オム・テソン、イム・ジョンジン、ムン・ソンファン、ユン・ソンファン、チョン・ジェチョル\n要旨：本研究では、中空コアを有するプレストレストコンクリート被覆鋼複合梁（PSC複合梁）の曲げ挙動を検討した。PSC複合断面は、鋼断面（H形または箱形断面）およびU字形コンクリート被覆からなるプレキャスト複合要素と、現場打ちコンクリートスラブで構成された。プレキャスト要素の下端にストランドを緊張することにより、ひび割れ抵抗性を向上させた。さらに、梁の重量を低減するため、ウェブに空洞を設けた。正曲げを受ける実大PSC複合梁6体を試験し、現場打ちスラブの打設前後における曲げ挙動を調査した。試験結果から、プレストレス導入段階で生じた鋼断面および鉄筋の初期ひずみは、既存のPSC設計理論による予測値とよく一致することが示された。その後の曲げ試験では、すべての梁が圧縮端部またはスラブにおけるコンクリート圧壊によって破壊した。PSC複合梁の剛性および耐力は、それぞれAISC 360-16に従って算定した被覆複合部材の有効剛性および全塑性モーメント耐力とよく一致した。現場打ちスラブとの界面では相対すべりは生じず、界面せん断抵抗には、プレキャストコンクリート被覆の鉛直スターラップと、スラブ内に定着または埋め込まれた鋼要素の頭付きスタッドの両方が寄与した。",
+        "zh": "作者：严泰成，林钟镇，文成焕，尹成焕，郑在哲\n摘要：本研究考察了具有空心芯的预应力混凝土包覆型钢组合梁（PSC组合梁）的抗弯性能。PSC组合截面由预制组合构件和现浇混凝土板组成，预制组合构件由型钢构件（H型钢或箱形截面）及U形混凝土包覆层构成。通过对预制构件底部的钢绞线施加预应力，提高了其抗裂性能。此外，在腹板中设置孔洞以减轻梁自重。对6根足尺PSC组合梁进行了正弯矩试验，并研究了其在浇筑现浇混凝土板前后的抗弯性能。试验结果表明，在施加预应力阶段产生的型钢构件和钢筋初始应变，与现有PSC设计理论的预测结果吻合良好。在后续抗弯试验中，所有梁均因受压端或楼板混凝土压碎而破坏。根据AISC 360-16计算的包覆型钢组合构件有效刚度和塑性弯矩强度，分别与PSC组合梁的刚度和强度吻合良好。在现浇混凝土板交界面处未发生相对滑移，界面抗剪能力由预制混凝土包覆层的竖向箍筋以及与楼板连接或埋置于楼板内的型钢构件栓钉共同提供。"
+      }
+    },
+    {
       "id": "paper_2024_2",
       "title": {
         "en": "Cyclic Lateral Load Test for RC Column–Steel Beam Joints with Simplified Connection Details [Journal of Structural Engineering] (2019.05)",
