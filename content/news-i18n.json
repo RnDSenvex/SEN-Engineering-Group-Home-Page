@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2024_4",
+      "title": {
+        "en": "“SEN Engineering’s Greatest Value Is Value Engineering” [Logistics Newspaper] (2024.09.30)",
+        "ja": "「センエンジニアリングの最上の価値はバリューエンジニアリング」［物流新聞］（2024.09.30）",
+        "zh": "“SEN工程的最高价值是价值工程” [物流新闻] (2024.09.30)"
+      },
+      "excerpt": {
+        "en": "Author: CEO Lee Seung-hwan",
+        "ja": "著者：イ・スンファン代表",
+        "zh": "作者：李承焕代表"
+      }
+    },
+    {
       "id": "news-20250528-1",
       "title": {
         "en": "SEN Engineering Group’s ‘PSRC (Prefabricated SRC)’ Columns Listed in Singapore Design Standards",
