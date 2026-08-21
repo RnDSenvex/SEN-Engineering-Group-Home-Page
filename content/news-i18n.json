@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20240612",
+      "title": {
+        "en": "2024 Steel Structure of the Year & Steel Structure Person of the Year Awards Selected by the Korean Society of Steel Construction",
+        "ja": "鋼構造学会選定 2024「今年の鋼構造物」賞＆「今年の鋼構造人」賞受賞",
+        "zh": "钢结构学会评选的2024“年度钢结构”奖及“年度钢结构人物”奖获奖"
+      },
+      "excerpt": {
+        "en": "The Korean Society of Steel Construction, a professional society leading Korea’s steel structure construction sector (Chair: Professor Lee Cheol-ho of Seoul National University), has selected Hyundai Motor Group Singapore Global Innovation Center (HMGICS) as the “Steel Structure of the Year.” HMGICS is a project that was successfully completed while strictly adhering to the budget and schedule even amid the pandemic, when the procurement of materials and labor was difficult, by applying our patented PSRC column and TSC composite beam system. Since the Singapore container terminal in 2018, we have been successfully carrying out steel structure design-construction projects applying PSRC & TSC in countries throughout Southeast Asia.\n\nAnother “Steel Structure of the Year,” Inspire Entertainment Resort, was designed and constructed by other companies, but our TSC composite beams were applied in its long-span sections. Among the three major steel structures of the year selected by the society, we are proud that our technology and products were applied to two, excluding Godeok Bridge, a civil engineering structure.\n\nThe society also selected SEN CORETECH CEO Lee Seung-hwan as one of the “Steel Structure Person of the Year.”",
+        "ja": "韓国の鋼構造物建設分野をリードする専門学会である韓国鋼構造学会（会長：李哲浩・ソウル大学教授）は、現代自動車グループ・シンガポール・グローバル・イノベーション・センター（HMGICS）を「今年の鋼構造物」賞に選定しました。HMGICSは、当社の特許工法であるPSRC柱およびTSC合成梁システムを適用し、資材および人材の調達が困難だったパンデミックの状況下においても、予算と工期を厳守して成功裏に竣工したプロジェクトです。当社は2018年のシンガポール・コンテナターミナルを皮切りに、東南アジア各国でPSRC＆TSCを適用した鋼構造設計・施工プロジェクトを成功裏に遂行しています。\n\nもう一つの「今年の鋼構造物」賞であるインスパイア・エンターテインメント・リゾートは、設計・施工を他社が担当しましたが、長スパン区間に当社のTSC合成梁が適用されました。鋼構造学会が選定した今年の3大鋼構造物のうち、土木建築物である高徳大橋（Godeok Bridge）を除く2件に当社の技術と製品が適用されたことを誇りに思います。\n\n学会はまた、SEN CORETECHの李承煥代表を「今年の鋼構造人」賞の1人に選定しました。",
+        "zh": "作为引领韩国钢结构建设领域的专业学会，韩国钢结构学会（会长：首尔大学教授李哲浩）将现代汽车集团新加坡全球创新中心（HMGICS）评选为“年度钢结构”奖。HMGICS项目采用了本公司的专利工法PSRC柱和TSC组合梁系统，即使在材料和人力供应困难的疫情期间，也严格遵守预算和工期，成功竣工。我们自2018年新加坡集装箱码头项目起，在东南亚各国成功实施了采用PSRC & TSC的钢结构设计-施工项目。\n\n另一项“年度钢结构”奖——INSPIRE娱乐度假村，虽由其他公司负责设计和施工，但在大跨度区间采用了本公司的TSC组合梁。在钢结构学会评选的年度三大钢结构中，除作为土木建筑物的高德大桥（Godeok Bridge）外，其余两项均应用了我们的技术和\n产品，我们对此深感自豪。\n\n学会还将SEN CORETECH代表李承焕评选为“年度钢结构人物”奖获得者之一。"
+      }
+    },
+    {
       "id": "tech_2024_3",
       "title": {
         "en": "HMB, Revolution in Prefabricated Construction Technology for Logistics Centers [Logistics News] (2024.04.01)",
