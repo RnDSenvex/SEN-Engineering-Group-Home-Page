@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "paper_2024_2",
+      "title": {
+        "en": "Cyclic Lateral Load Test for RC Column–Steel Beam Joints with Simplified Connection Details [Journal of Structural Engineering] (2019.05)",
+        "ja": "簡略化された接合詳細を有するRC柱―鉄骨梁接合部の繰返し水平荷重試験［構造工学ジャーナル］（2019.05）",
+        "zh": "采用简化连接细节的钢筋混凝土柱—钢梁节点循环侧向荷载试验［结构工程期刊］（2019.05）"
+      },
+      "excerpt": {
+        "en": "Authors: Ho-Jun Lee, Hong-Gun Park, Hyun-Jong Hwang, Chang-Soo Kim\n\nAbstract: Existing experimental results show that carefully designed RC column-to-steel beam (RCS) joints have high seismic resistance comparable to those of traditional steel or RC frames with seismic details. However, such high seismic performance requires complicated and expensive strengthening details, which causes difficulties in fabrication and construction. This study investigated simpler strengthening methods, targeting moderate seismic capacity. Four interior RCS joint specimens were tested under cyclic lateral loading. The major test parameters were the strengthening details of the beam–column joint, such as face bearing plates, transverse beams, and headed studs. The test specimens with the proposed methods exhibited good deformation capacity exceeding a 4.0% story drift ratio after yielding of the beams and beam–column connection. However, the peak load did not reach the nominal strength based on the beam plastic moment due to early joint damage. The failure modes and test strengths were compared with the predictions of ASCE design guidelines. On the basis of the results, design recommendations for the simplified connection details were proposed.",
+        "ja": "著者：イ・ホジュン、パク・ホングン、ファン・ヒョンジョン、キム・チャンス\n要旨：既往の実験結果によると、適切に設計されたRC柱―鉄骨梁（RCS）接合部は、耐震詳細を有する従来の鉄骨架構またはRC架構に匹敵する高い耐震性能を示す。しかし、このような高い耐震性能を実現するには、複雑かつ高価な補強詳細が必要であり、製作および施工上の困難を招く。本研究では、中程度の耐震性能を対象として、より簡易な補強方法を検討した。4体の内部RCS接合部試験体について、繰返し水平載荷実験を実施した。主な実験変数は、支圧プレート、横梁、および頭付きスタッドなどの梁―柱接合部の補強詳細であった。提案手法を適用した試験体は、梁および梁―柱接合部の降伏後に、層間変形角4.0%を超える良好な変形能力を示した。しかし、接合部の早期損傷により、最大荷重は梁の全塑性モーメントに基づく公称耐力に達しなかった。破壊モードおよび実験耐力を、ASCE設計指針による予測値と比較した。その結果に基づき、簡易接合詳細に関する設計推奨事項を提案した。",
+        "zh": "作者：李浩俊、朴弘根、黄贤钟、金昌洙\n摘要：现有试验结果表明，经过精心设计的钢筋混凝土柱-钢梁（RCS）节点具有较高的抗震性能，可与采用抗震构造细节的传统钢框架或钢筋混凝土框架相媲美。然而，如此高的抗震性能需要复杂且昂贵的加固构造细节，从而给制作和施工带来困难。本研究针对中等抗震承载力，研究了较为简化的加固方法。对4个RCS中柱节点试件进行了低周往复侧向加载试验。主要试验参数为梁柱节点的加固构造细节，例如面承压板、横向梁和带头栓钉。采用所提方法的试件在梁和梁柱连接屈服后表现出良好的变形能力，层间位移角超过4.0%。然而，由于节点过早损伤，峰值荷载未达到基于梁塑性弯矩的名义强度。将破坏模式和试验强度与ASCE设计指南的预测结果进行了比较。基于试验结果，提出了简化连接构造细节的设计建议。"
+      }
+    },
+    {
       "id": "news-20240612",
       "title": {
         "en": "2024 Steel Structure of the Year & Steel Structure Person of the Year Awards Selected by the Korean Society of Steel Construction",
