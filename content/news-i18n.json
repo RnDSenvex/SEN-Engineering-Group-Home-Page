@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20240828-1",
+      "title": {
+        "en": "Building and Construction Authority (BCA) Selects PSRC & TSC Application Site as Project of The Year",
+        "ja": "シンガポール建設庁（BCA）がProject of The YearにPSRC柱＆TSC適用現場を選定",
+        "zh": "新加坡建设局（BCA）将应用PSRC柱和TSC的项目现场评选为年度项目"
+      },
+      "excerpt": {
+        "en": "\"Since 2022, the Building and Construction Authority (BCA) has annually selected and awarded the “Project Of The Year (POTY)” to comprehensively evaluate the efficiency, safety, environmental friendliness, and other aspects of construction projects built in Singapore, with the aim of presenting architectural trends pursued at the national level.\n\nFor the 2024 BCA-selected POTY, two cutting-edge industrial buildings were selected as finalists, and both candidates are buildings that applied our patented pre-assembled composite construction method, the PSRC column and TSC composite beam system. (See photo above)\nThe 2024 BCA POTY is especially meaningful in that it marks the first award-winning record for Korean construction technology.\n\nJTC Logistics Hub was our first overseas project and represented a challenging undertaking as: 1) a project carried out by an overseas construction company with no local ties; and 2) an overseas government-funded project. It is also a very important achievement in that our engineering capabilities improved remarkably in the process of successfully completing it.\n \nHMGICS was constructed during the pandemic, resulting in major difficulties in securing on-site personnel and materials; however,\nwe take pride in having contributed to preventing significant deviations from the original budget and construction schedule\nby applying our technology, which minimizes on-site work.\"",
+        "ja": "シンガポール建設庁（BCA）は2022年から、シンガポールで建設される建設プロジェクトの効率性、安全性、環境配慮性などを総合的に評価し、国家レベルで目指す建築トレンドを提示する趣旨で、毎年「今年の優秀建設プロジェクト（Project Of The Year ; POTY）」を選定・表彰しています。\n\n2024年のBCA選定POTYでは、2棟の先端産業用建物が最終候補作に選定されましたが、\n両候補作はいずれも当社の特許取得済み先組立て合成工法であるPSRC柱およびTSC合成梁システムを適用した建物です。（上記写真参照）\n韓国の建設技術としては初の受賞記録であるという点で、2024年のBCA POTYはその意義がより一層格別であると言えます。\n\nJTC Logistics Hubは、当社初の海外進出プロジェクトであると同時に、1）国内での地縁が全くない海外建設会社が進める；2）海外の官給工事という挑戦的な課題であり、これを成功裏に完遂する過程で当社のエンジニアリング能力が飛躍的に向上したという点で、非常に重要な実績です。\n \nHMGICSはパンデミックの状況下で工事が進められたため、現場人員および資材の需給に大きな困難がありましたが、\n現場作業を最小化する当社技術を適用することで、当初の予算および工期から大きく逸脱しないようにすることに貢献したという\n誇りを持っています。",
+        "zh": "“新加坡建设局（BCA）自2022年起，对在新加坡建设的建筑项目的效率、安全性、环保性等进行综合评估，以呈现国家层面所倡导的建筑趋势为宗旨，每年评选并颁发“年度优秀建筑项目（Project Of The Year；POTY）”。\n\n在2024年由BCA评选的POTY中，有2座先进工业建筑入选最终候选项目，\n两座候选建筑均采用了本公司的专利预制装配组合工法PSRC柱和TSC组合梁系统。（参见上图）\n鉴于这是韩国建筑技术首次获奖，2024年的BCA POTY可谓具有更加格外特殊的意义。\n\nJTC Logistics Hub既是本公司的首个海外拓展项目，也是1）由一家在当地毫无根基的海外建筑公司实施；2）海外政府发包工程这一具有挑战性的课题，并且在成功完成该项目的过程中，本公司的工程技术能力突飞猛进，因此是一项极为重要的业绩。\n \nHMGICS在疫情期间施工，现场人力及材料供应面临巨大困难，\n但通过应用本公司可最大限度减少现场作业的技术，为使项目不大幅偏离原定预算和工期作出了贡献，\n我们对此深感自豪。”"
+      }
+    },
+    {
       "id": "paper_2024_1",
       "title": {
         "en": "Experimental and analytical investigation of bracket moment connection for precast concrete beam-to-composite column joints [Journal of Building Engineering] (2024.08)",
