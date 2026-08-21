@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20251203-1",
+      "title": {
+        "en": "The Game Changer in the Construction Industry, OSC",
+        "ja": "建設産業のゲームチェンジャー、OSC",
+        "zh": "建筑行业的游戏规则改变者，OSC"
+      },
+      "excerpt": {
+        "en": "OSC (Off-site Construction) is a game changer that transforms the construction industry into an advanced manufacturing industry by overcoming the aging construction workforce, strengthened environmental and safety regulations, and rising construction costs.\n\nSEN Engineering Group provides leading domestic and international clients with innovative OSC solutions spearheaded by PSRC and TSC,\n\noffering one-stop total engineering services encompassing customized technology development, design, fabrication, procurement, construction, and after-sales management.",
+        "ja": "OSC（Off-site Construction）は、施工人材の高齢化、環境および安全関連規制の強化、工事原価の上昇を克服し\n\n建設産業を先端製造業へと変革するゲームチェンジャーです。\n\nSEN Engineering Groupは、PSRC、TSCをはじめとする革新的なOSCソリューションにより、国内外の有数のお客様に\n\nカスタマイズされた技術開発、設計、製作、調達、施工、アフターサービスに至るまで責任を持って提供する\n\nワンストップ・トータルエンジニアリングサービスを提供します。",
+        "zh": "OSC（Off-site Construction）是为克服施工人员老龄化、环境及安全相关法规强化以及工程成本上升，\n\n将建筑产业转变为先进制造业的颠覆性变革者。\n\n我们SEN Engineering Group以PSRC、TSC为首的创新型OSC解决方案，为国内外众多优秀客户提供\n\n从定制化技术开发、设计、制作、采购、施工到售后管理全程负责的\n\n一站式综合工程服务。"
+      }
+    },
+    {
       "id": "news-20251218",
       "title": {
         "en": "SEN CORETECH CEO Lee Seung-hwan Selected as One of Seoul National University College of Engineering’s “50 Innovative Alumni”",
