@@ -1,11 +1,33 @@
 {
-  "rank": { "current": 4, "year": 2026 },
-  "headcount": { "total": 521, "own": 402, "partner": 119 },
+  "rank": {
+    "current": 4,
+    "year": 2026
+  },
+  "headcount": {
+    "total": 521,
+    "own": 402,
+    "partner": 119
+  },
   "yearly": [
-    { "year": 2021, "value": 850 },
-    { "year": 2022, "value": 990 },
-    { "year": 2023, "value": 1120 },
-    { "year": 2024, "value": 1340 },
-    { "year": 2025, "value": 1580 }
+    {
+      "year": 2021,
+      "value": 784
+    },
+    {
+      "year": 2022,
+      "value": 1512
+    },
+    {
+      "year": 2023,
+      "value": 1587
+    },
+    {
+      "year": 2024,
+      "value": 1868
+    },
+    {
+      "year": 2025,
+      "value": 1803
+    }
   ]
 }
