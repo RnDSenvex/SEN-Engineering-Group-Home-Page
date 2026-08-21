@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2024_2",
+      "title": {
+        "en": "Development and Structural Performance of PC Beam-PSRC Column Connections (Pre-Assembled Angle-Embedded Composite Columns and Brackets) [Journal of Korean Society of Steel Construction] (2022.08)",
+        "ja": "PC梁-PSRC柱接合部の開発および構造性能（先組みアングル埋込み型合成柱およびブラケット）［韓国鋼構造学会誌］（2022.08）",
+        "zh": "PC梁-PSRC柱连接部开发及结构性能（预组装角钢埋入型组合柱及托架）[韩国钢结构学会志]（2022.08）"
+      },
+      "excerpt": {
+        "en": "Authors: Seunghwan Lee, Hoyoung Park, Jungho Kang, Jongjin Lim",
+        "ja": "著者：イ・スンファン、パク・ホヨン、カン・ジョンホ、イム・ジョンジン",
+        "zh": "作者：李承焕、朴浩英、姜正浩、林钟镇"
+      }
+    },
+    {
       "id": "paper_2024_3",
       "title": {
         "en": "Flexural Behavior of Prestressed Concrete Embedded Steel Composite Beams with Hollow Cores [Journal of Korean Society of Steel Construction] (2023.10)",
