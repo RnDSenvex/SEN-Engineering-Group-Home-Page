@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20260806-1",
+      "title": {
+        "en": "AI Data Center Construction “Race Against Time” – Reducing One Year of Structural Frame Construction to Two Months with Advanced Prefabrication Method",
+        "ja": "AIデータセンター建設「スピード戦」―先進的な先組立工法により1年の躯体工事を2カ月に短縮",
+        "zh": "AI数据中心建设“速度战”——通过先进预组装工法将1年的主体结构施工缩短至2个月"
+      },
+      "excerpt": {
+        "en": "In AI data center structural frame construction, where shortening the construction period is critical, the OSC (off-site construction) method is now becoming a virtually essential element.\n\nSEN Engineering Group’s PSRC & TSC method, adopted by a considerable number of major AI data centers currently under construction, was introduced in industry media as one of the leading examples of OSC.\n\n“SK Telecom and SK ecoplant, in partnership with global cloud company Amazon Web Services (AWS), are also applying the PSRC column method, which falls under the OSC method, to the ‘SK Ulsan AI Data Center’ being developed in the Ulsan Mipo National Industrial Complex with completion targeted for May next year. The structural frame construction of the five-story Building A has already been completed in just 25 days per floor.\n\nThe PSRC column method is a technology in which conventional steel-reinforced concrete (SRC) structures, including formwork, are preassembled at a factory, after which only concrete is poured on site to complete composite columns. SENCORETECH, the technology developer, has verified the PSRC column method not only at the Yongin semiconductor plant but also at advanced overseas sites, including the Hyundai Motor Group Innovation Center Singapore (HMGICS) and the Jurong Town Corporation (JTC) logistics hub.”",
+        "ja": "工期短縮が鍵となるAIデータセンターの躯体工事において、OSC（off-site construction）工法は今や事実上不可欠な要素となっています。\n\n現在施工中の主要AIデータセンターの相当数で採用されているSEN Engineering GroupのPSRC＆TSC工法が、OSCを代表する工法の一つとして業界メディアで紹介されました。\n\n「SKテレコムとSKエコプラントがグローバルクラウド企業であるアマゾンウェブサービス（AWS）と協力し、来年5月の竣工を目標に蔚山・尾浦国家産業団地に構築する『SK蔚山AIデータセンター』にも、OSC工法に該当するPSRC柱工法が適用されている。すでに5階建てのA棟の躯体工事を、1フロア当たりわずか25日で完成させた。\n\nPSRC柱工法は、従来の鉄骨鉄筋コンクリート（SRC）構造を工場で型枠まで先組みした後、現場ではコンクリートのみを打設して合成柱を完成させる技術である。技術開発会社であるSENCORETECHは、PSRC柱工法を通じて龍仁の半導体工場だけでなく、シンガポールのHyundai Motor Group Innovation Center Singapore (HMGICS)およびジュロン都市公社（JTC）の物流ハブなど、海外の先端現場でも実証を完了した。」",
+        "zh": "在工期缩短成为关键的AI数据中心主体结构施工中，OSC（场外施工）工法如今实际上正成为必不可少的要素。\n\nSEN Engineering Group的PSRC及TSC工法已被应用于目前在建的众多主要AI数据中心，并作为OSC的代表性工法之一被行业媒体介绍。\n\n“SK电讯和SK ecoplant与全球云计算企业亚马逊云科技（AWS）合作，以明年5月竣工为目标，在蔚山美浦国家产业园区建设的‘SK蔚山AI数据中心’同样采用了属于OSC工法的PSRC柱工法。其A栋5层规模的主体结构施工已实现每层仅用25天完成。\n\nPSRC柱工法是一项将既有型钢钢筋混凝土（SRC）结构在工厂内预组装至模板阶段，现场仅浇筑混凝土以完成组合柱的技术。技术开发企业SENCORETECH通过PSRC柱工法，不仅在龙仁半导体工厂，还在新加坡Hyundai Motor Group Innovation Center Singapore (HMGICS)及裕廊集团（JTC）物流枢纽等海外尖端项目中完成了验证。”"
+      }
+    },
+    {
       "id": "news-2026-09-01",
       "title": {
         "en": "PSRC Standard Implementation",
