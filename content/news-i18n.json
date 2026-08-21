@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2024_1",
+      "title": {
+        "en": "Case of Promoting KS Steel Material Standards in Singapore Building Code BC1, etc. [Journal of the Korean Society of Steel Construction] (2023.08)",
+        "ja": "シンガポール建設基準BC1内のKS鋼材規格等再推進事例［韓国鋼構造学会誌］（2023.08）",
+        "zh": "新加坡建筑标准BC1中推进KS钢材标准等的案例 [韩国钢结构学会志] (2023.08)"
+      },
+      "excerpt": {
+        "en": "Cases of Re-Promoting KS Steel Material Standards, etc., in Singapore Construction Standard BC1  \nAuthors: Koo Ja-hoon, Lee Seung-hwan, Lim Jong-jin",
+        "ja": "シンガポール建設基準BC1におけるKS鋼材規格などの再推進事例\n著者：ク・ジャフン、イ・スンファン、イム・ジョンジン",
+        "zh": "新加坡建筑标准BC1中推进纳入KS钢材标准的案例\n作者：具滋勋、李承焕、林钟镇"
+      }
+    },
+    {
       "id": "paper_2024_4",
       "title": {
         "en": "Cyclic Loading Test for Beam–Column Joints of Precast Concrete Beam and Concrete-Encased Steel Angle Column [Journal of Structural Engineering] (2023.02.25)",
