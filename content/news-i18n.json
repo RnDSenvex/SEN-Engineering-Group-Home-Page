@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2024_3",
+      "title": {
+        "en": "HMB, Revolution in Prefabricated Construction Technology for Logistics Centers [Logistics News] (2024.04.01)",
+        "ja": "HMB、物流センターのプレハブ建設技術に革命［物流新聞］（2024.04.01）",
+        "zh": "HMB，物流中心预组装建造技术的革命 [物流新闻] (2024.04.01)"
+      },
+      "excerpt": {
+        "en": "Author: CEO Lee Seung-hwan",
+        "ja": "著者：イ・スンファン代表",
+        "zh": "作者：首席执行官李承焕"
+      }
+    },
+    {
       "id": "paper_2024_1",
       "title": {
         "en": "Experimental and analytical investigation of bracket moment connection for precast concrete beam-to-composite column joints [Journal of Building Engineering] (2024.08)",
