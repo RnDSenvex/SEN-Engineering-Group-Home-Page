@@ -1,27 +1,11 @@
 {
   "items": [
     {
-      "id": "news-2026-08-06",
-      "date": "2026-08-06",
-      "category": "언론보도",
-      "image": "/uploads/images/1.jpg",
-      "link": "https://m.dnews.co.kr/m_home/view.jsp?idxno=202607251833267400498",
-      "title": "AI데이터센터 건설 “속도전” – 첨단 선조립 공법으로 1년 골조공사를 2개월로 단축",
-      "excerpt": "공기 단축이 관건인 AI 데이터센터 골조 공사에 OSC(off-site construction)공법이 이제 사실상 필수 요소가 되고 있습니다.\n\n현재 시공중인 주요 AI  데이터 센터들 중 상당수에 채택된 센 엔지니어링그룹의 PSRC & TSC 공법이 OSC의 대표 주자 중 하나로서 업계 언론에 소개되었습니다.\n\n“SK텔레콤과 SK에코플랜트가 글로벌 클라우드 기업 아마존웹서비스(AWS)와 손잡고, 내년 5월 준공을 목표로 울산 미포국가산업단지에 구축하는 ‘SK 울산 AI 데이터센터’ 역시 OSC 공법에 해당하는 PSRC 기둥 공법을 적용한다. 이미 5층 규모의 A동 골조공사를 1개 층당 불과 25일 만에 완성했다.\n\nPSRC 기둥 공법은 기존 철골철근콘크리트(SRC) 구조를 공장에서 거푸집까지 선조립한 뒤 현장에서는 콘크리트만 타설해 합성 기둥을 완성하는 기술이다. 기술개발사인 센코어테크는 PSRC 기둥 공법을 통해 용인 반도체 공장뿐 아니라 싱가포르 현대차그룹 글로벌 혁신센터(HMGICS) 및 주롱도시공사(JTC) 물류허브 등 해외 첨단 현장에서도 검증을 마쳤다.”"
-    },
-    {
       "id": "tech_2025_2",
       "date": "2025-12-29",
       "category": "기술자료",
       "title": "PSRC Column–TSC Beam Composite System for the Hyundai Motor Group Innovation Center Singapore [Structural Engineering International] <2025.12>",
       "excerpt": "저자: 이승환, 조광원, 노경민, 박재혁\nAbstract : The Hyundai Motor Group Innovation Center Singapore (HMGICS) is a seven-storey, 86,900 m² smart-factory integrating EV manufacturing, R&D, and customer experience functions. To meet high structural demands within a compressed schedule, a composite system of Prefabricated Steel-Reinforced Concrete (PSRC) columns and Thin-Steel Composite (TSC) beams was adopted. The PSRC system—characterized by steel angles, bolt-only connections, permanent steel formwork—eliminated field welding and temporary shoring, reducing on-site labour by approximately 40% and shortening construction by five months. Design followed Eurocodes with the Singapore National Annex. The PSRC–TSC frame satisfied Class 3 robustness criteria through key-element design. Despite pandemic-related logistics challenges, the prefabricated PSRC-TSC system proved effective and is formally recognized in Singapore’s forthcoming BC4:2025 Design Guide. The project affirms the PSRC–TSC system’s potential for high-performance, prefabricated industrial structures."
-    },
-    {
-      "id": "public_2025_2",
-      "date": "2025-12-03",
-      "category": "홍보자료",
-      "title": "건설산업의 게임체인저, OSC",
-      "excerpt": "OSC (Off-site Construction)는 시공인력 고령화, 환경 및 안전 관련 규제 강화, 공사원가 상승을 극복하여\n건설산업을 첨단제조업으로 탈바꿈하는 게임체인저입니다.\n우리 센 엔지니어링그룹은 PSRC, TSC를 필두로 하는 혁신적 OSC솔루션으로 국내외 유수 고객사들께\n맞춤형 기술개발, 설계, 제작, 조달, 시공, 사후관리까지 책임지는\n원스톱 토탈 엔지니어링서비스를 제공합니다."
     },
     {
       "id": "tech_2025_1",
@@ -80,13 +64,6 @@
       "category": "기술자료",
       "title": "싱가포르 건설기준 BC1 내 KS 강재 표준 등 재 추진 사례 [한국강구조학회지] (2023.08)",
       "excerpt": "싱가포르 건설기준 BC1 내 KS 강재 표준 등 재 추진 사례\n저자: 구자훈, 이승환, 임종진"
-    },
-    {
-      "id": "public_2024_1",
-      "date": "2024-08-05",
-      "category": "홍보자료",
-      "title": "기술 개발, 설계, 생산, 시공까지 통합 서비스 센 엔지니어링 그룹 [한국강구조학회지] (2024.06)",
-      "excerpt": "저자: 이승환 대표, 김민재 차장"
     },
     {
       "id": "paper_2024_4",
