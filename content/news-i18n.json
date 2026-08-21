@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2024_5",
+      "title": {
+        "en": "Application of the Pre-Assembled Composite Construction Method in the Singapore Construction Market and Design Case Studies – Winner of BCA Project of the Year 2024 [Journal of the Korean Society of Steel Construction] (2024.10)",
+        "ja": "先組立合成工法のシンガポール建設市場への適用と設計事例－BCA今年のプロジェクト2024受賞［韓国鋼構造学会誌］（2024.10）",
+        "zh": "预制装配组合工法在新加坡建筑市场的应用与设计案例——荣获2024年BCA年度项目奖［韩国钢结构学会志］（2024.10）"
+      },
+      "excerpt": {
+        "en": "Application of the Pre-assembled Composite Construction Method in the Singapore Construction Market and Design Case Study – Winner of the BCA Project of the Year 2024 Award  \nAuthors: Deputy General Manager Minjae Kim, CEO Seunghwan Lee",
+        "ja": "先組立て合成工法のシンガポール建設市場への適用と設計事例 – BCAプロジェクト・オブ・ザ・イヤー2024受賞\n著者：キム・ミンジェ次長、イ・スンファン代表",
+        "zh": "预组装组合工法在新加坡建筑市场的应用及设计案例——荣获 BCA 2024 年度项目奖\n作者：金敏宰次长、李承焕代表"
+      }
+    },
+    {
       "id": "tech_2024_4",
       "title": {
         "en": "“SEN Engineering’s Greatest Value Is Value Engineering” [Logistics Newspaper] (2024.09.30)",
