@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20260129",
+      "title": {
+        "en": "SENCORETECH CEO Lee Seung-hwan Interview Published in The Korea Economic Daily",
+        "ja": "SENCORETECH イ・スンファン代表インタビュー、韓国経済紙に掲載",
+        "zh": "SENCORETECH代表李承焕采访刊登于韩国经济新闻（韩经）"
+      },
+      "excerpt": {
+        "en": "An interview with SENCORETECH CEO Lee Seung-hwan was prominently featured recently in The Korea Economic Daily, one of South Korea’s leading business newspapers.\n\nThe article spotlighted CEO Lee Seung-hwan’s forward-looking leadership as an engineer-turned-CEO who has boldly applied the rational mindset of manufacturing and extensive field experience to the construction industry.\n\nThe article introduced tangible results achieved by SENCORETECH’s unparalleled technological capabilities at advanced construction sites, including semiconductor plants, data centers, and large-scale industrial facilities, as key examples.\n\nConstruction methods based on DfMA (Design for Manufacture and Assembly), OSC, and modular structural systems have been introduced,\nand were recognized for simultaneously achieving three goals: shorter construction periods, reduced construction costs, and improved quality and safety through off-site fabrication and on-site assembly.\n\nThe article also presented a blueprint for the next-generation construction industry that SENCORETECH will build.\n\nOur Group will continue to further advance standardized prefabricated (Pre-fab) structural systems and achieve complete vertical integration across design, manufacturing, and construction.\nIn particular, it announced that it is fully prepared to lead next-generation large-scale industrial projects through AI-based engineering and automation technologies.\n\nIn recognition of these continuous challenges and achievements, CEO Lee Seung-hwan was honored to be selected as one of the “50 Innovative Alumni of Seoul National University.”\nThis recognition is especially meaningful as it represents an official external assessment of an innovation case that has translated technological capabilities into actual industrial achievements.\n\nThis accomplishment will become a symbolic milestone, demonstrating that engineer-driven innovation proven in the field is the future competitiveness of the construction and manufacturing industries, beyond being an individual honor.",
+        "ja": "最近、大韓民国を代表する経済紙である韓国経済新聞（ハンギョン）に、当社SENCORETECHのイ・スンファン代表のインタビュー記事が大きく取り上げられました。\n\n今回の記事では、エンジニア出身のCEOとして、製造業の合理的な思考方式と豊富な現場経験を建設産業に大胆に融合してきたイ・スンファン代表の進取的な歩みが集中的に紹介されました。\n\n記事では、SENCORETECHの卓越した技術力が、半導体工場、データセンター、大型産業施設などの先端施工現場で収めている実質的な成果を、主要事例として紹介しました。\n\nDfMA（製造・組立を考慮した設計）、OSC、モジュラー構造システムを基盤とした工法を導入し、\n工場での先行製作後に現場で組み立てる方式を通じて、工期短縮と工事費削減はもちろん、品質および安全性の向上という三つの成果を同時に実現したと評価されています。\n\nまた、SENCORETECHが描いていく次世代建設産業の青写真も併せて提示されました。\n\n当グループは今後も、標準化されたプレハブ（Pre-fab）構造システムをさらに高度化し、設計・製造・施工の完全な垂直統合を実現していきます。\n特に、AI基盤のエンジニアリングおよび自動化技術を通じて、次世代の大型産業プロジェクトを先導していくための万全の準備を整えていることを示しました。\n\nこうした絶え間ない挑戦と功績が認められ、イ・スンファン代表は「ソウル大学革新同窓生50人」に選定される栄誉に浴しました。\nこれは、技術力を実際の産業成果として具現化した革新事例として、対外的な公式評価を受けたものであり、より一層意義深いものです。\n\n今回の成果は個人の栄誉を超え、現場で検証されたエンジニア中心の革新こそが、建設および製造産業の将来競争力であることを示す象徴的な道標となるでしょう。",
+        "zh": "近日，作为韩国代表性经济媒体的韩国经济新闻（韩经）重点报道了我司SENCORETECH代表李承焕的专访文章。\n\n本次报道重点聚焦了李承焕代表作为工程师出身的CEO，将制造业理性的思维方式与丰富的现场经验大胆融入建筑产业的进取步伐。\n\n报道以半导体工厂、数据中心、大型工业设施等先进施工现场为核心案例，介绍了SENCORETECH卓越技术实力所取得的实际成果。\n\n引入了基于DfMA（面向制造与装配的设计）、OSC及模块化结构系统的施工方法，\n通过工厂预制后现场组装的方式，在缩短工期、降低工程成本的同时，实现了提升质量与安全性的三重目标，获得了高度评价。\n\n此外，报道还展现了SENCORETECH将要描绘的下一代建筑产业蓝图。\n\n本集团今后也将进一步高度化标准化预制（Pre-fab）结构系统，并实现设计—制造—施工的完全垂直整合。\n特别是，通过基于AI的工程技术及自动化技术，表明已做好充分准备，引领下一代大型工业项目。\n\n凭借这些不懈的挑战与贡献，李承焕代表荣获入选“首尔大学创新校友50人”的殊荣。\n这作为将技术实力转化为实际产业成果的创新案例，获得了对外正式评价，因此更具意义。\n\n此次成果超越了个人荣誉，必将成为一座象征性的里程碑，彰显经现场验证的以工程师为中心的创新，正是建筑与制造产业未来竞争力的关键。"
+      }
+    },
+    {
       "id": "news-20260129-2",
       "title": {
         "en": "SEN Engineering Group 2026 New Year’s Meeting Vision Sharing",
