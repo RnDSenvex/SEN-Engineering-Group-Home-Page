@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20260130-1",
+      "title": {
+        "en": "Korea Electric Power Corporation (KEPCO) Officially Unveils SEN's TSC-PSRC Method Application Project",
+        "ja": "韓国電力公社（KEPCO）、SENのTSC-PSRC工法適用プロジェクトを正式公開",
+        "zh": "韩国电力公社（KEPCO）正式公开SEN应用TSC-PSRC工法的项目"
+      },
+      "excerpt": {
+        "en": "We would like to share a highly meaningful example of how the future of public construction is being realized through our technology.\n\nRecently, Korea Electric Power Corporation (KEPCO) introduced, through an official video, a public building project completed on a fast-track basis using SEN’s TSC-PSRC method.\n\nWhat is particularly noteworthy about this project is that, rather than the method merely being proposed, KEPCO first closely reviewed SEN’s technology and requested its application.\n\nGiven the nature of public facilities, where high safety and structural reliability are absolutely required,\n\nKEPCO focused on SEN’s OSC-based method, which can secure both shorter construction periods and construction stability.\n\nThrough factory production and on-site assembly, the construction period was dramatically reduced,\n\nwhile construction efficiency was enhanced by reducing on-site work risks and dependence on manpower.\n\nIn addition, the stringent structural safety standards required for public facilities were fully met. KEPCO’s choice carries great symbolic significance.\n\nThis is tantamount to having our technology recognized by a federal-level public institution overseeing national power infrastructure in the United States, or by core national infrastructure agencies such as Singapore’s SP Group or JTC.\n\nThe adoption of SEN’s method by such authoritative institutions\n\nmeans that our technology goes beyond mere “innovation” and has already been verified in the field,\n\ndemonstrating strong reliability.",
+        "ja": "公共建設の未来が、当社の技術を通じて現実の場でどのように実現されているかを示す、非常に意義深い事例をご紹介します。\n\n最近、韓国電力公社（KEPCO）は、セン（SEN）のTSC-PSRC工法を適用し、ファストトラックで完成した公共建築物プロジェクトを公式映像を通じて紹介しました。\n\n今回のプロジェクトで特に注目すべき点は、当該工法が単なる提案にとどまらず、韓国電力公社側が先にセンの技術を綿密に検討し、適用を要請したという事実です。\n\n高い安全性と構造的信頼性が絶対的に求められる公共施設の特性上、\n\n韓国電力公社は、工期短縮と施工安定性を同時に確保できる、当社センのOSCベース工法に注目しました。\n\n工場製作および現場組立方式を通じて工事期間を画期的に短縮し、\n\n現場作業のリスクと人材依存度を低減することで、施工効率を高めました。\n\nさらに、公共施設に求められる厳格な構造安全基準を完全に満たしました。\n韓国電力公社の今回の選択は、非常に大きな象徴性を持ちます。\n\n米国に例えれば、国家電力インフラを統括する連邦級の公共機関、シンガポールのSP GroupやJTCのような国家中核インフラ機関が\n\n当社の技術を認めたことにほかならないからです。\n\nこのような公信力のある機関がセンの工法を採用したことは、\n\n当社の技術が単なる「革新性」を超え、すでに現場で検証された\n\n強固な信頼性を備えていることを意味します。",
+        "zh": "我们分享一个极具意义的案例，展示公共建设的未来如何通过我们的技术在现实中得以实现。\n\n近日，韩国电力公社（KEPCO）通过官方视频介绍了采用SEN的TSC-PSRC工法、以快速施工方式竣工的公共建筑项目。\n\n本项目尤其值得关注的是，该工法并非仅止于提案，而是韩国电力公社方面首先对SEN的技术进行了细致评估，并主动提出应用请求。\n\n鉴于公共设施对高安全性和结构可靠性有着绝对要求，\n\n韩国电力公社关注到我们SEN可同时确保缩短工期与施工稳定性的、基于OSC的工法。\n\n通过工厂预制与现场组装方式，大幅缩短了施工周期，\n\n并通过降低现场作业风险和对人力的依赖，提高了施工效率。\n\n此外，该项目完全满足了公共设施所要求的严格结构安全标准。\n韩国电力公社此次的选择具有极大的象征意义。\n\n这相当于我们的技术获得了如美国负责统筹国家电力基础设施的联邦级公共机构，或新加坡的SP Group、JTC等国家核心基础设施机构的认可。\n\n这些具有公信力的机构采用SEN的工法，\n\n意味着我们的技术不仅具备“创新性”，更已在现场得到验证，\n\n并拥有强大的可靠性。"
+      }
+    },
+    {
       "id": "news-20260806-1",
       "title": {
         "en": "AI Data Center Construction “Race Against Time” – Reducing One Year of Structural Frame Construction to Two Months with Advanced Prefabrication Method",
