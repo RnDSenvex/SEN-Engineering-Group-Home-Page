@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "paper_2024_4",
+      "title": {
+        "en": "Cyclic Loading Test for Beam–Column Joints of Precast Concrete Beam and Concrete-Encased Steel Angle Column [Journal of Structural Engineering] (2023.02.25)",
+        "ja": "プレキャストコンクリート梁とコンクリート被覆鋼山形鋼柱の梁・柱接合部に対する繰返し載荷試験［構造工学ジャーナル］（2023.02.25）",
+        "zh": "预制混凝土梁与混凝土包覆角钢柱梁柱节点循环加载试验 [结构工程学报] (2023.02.25)"
+      },
+      "excerpt": {
+        "en": "Authors: Jongjin Lim, Taeseong Eom, Hyeonjong Hwang, Seungjae Lee, Seunghwan Lee\n\nAbstract: Precast concrete (PC) and composite structures have been widely used in large industrial buildings for constructability and cost efficiency. PC beams and composite columns are preferable for use as long-span beams and large-sized columns, respectively, to achieve efficient steel-concrete composite construction. This study developed seismic details for PC beam-to-composite column joints. Cyclic loading tests were conducted on beam-column joints to investigate their seismic performance. The test parameters included connection details and plastic hinge relocation. The test results showed that the load-carrying capacity and deformation capacity of the specimens satisfied the requirements for intermediate moment frames specified in AISC 341-16. Furthermore, the load-carrying capacities predicted using the plastic hinge relocation concept and the effective tensile force of the bottom reinforcement at the PC beam section agreed with the test results.",
+        "ja": "著者：イム・ジョンジン、オム・テソン、ファン・ヒョンジョン、イ・スンジェ、イ・スンファン\n\n要旨：プレキャストコンクリート（PC）および合成構造は、施工性およびコスト効率の観点から、大規模産業建築物に広く用いられている。効率的な鉄骨コンクリート合成構造を実現するため、PC梁および合成柱は、それぞれ長スパン梁および大断面柱としての使用に適している。本研究では、PC梁－合成柱接合部の耐震詳細を開発した。耐震性能を調査するため、梁柱接合部に対して繰返し載荷試験を実施した。試験パラメータとして、接合詳細および塑性ヒンジの移設を考慮した。試験結果は、供試体の耐荷力および変形能力が、AISC 341-16で規定された中間モーメントフレームの要求事項を満たすことを示した。さらに、塑性ヒンジ移設の概念およびPC梁断面における下端鉄筋の有効引張力を用いて予測した耐荷力は、試験結果と一致した。",
+        "zh": "作者：林钟镇、严泰成、黄贤钟、李承宰、李承焕\n摘要：预制混凝土（PC）和组合结构因其施工便利性和成本效率，已广泛应用于大型工业建筑中。PC梁和组合柱分别适合作为长跨度梁和大尺寸柱使用，以实现高效的钢—混凝土组合结构施工。本研究开发了PC梁—组合柱节点的抗震构造细节。对梁柱节点进行了循环加载试验，以研究其抗震性能。试验参数考虑了连接构造细节和塑性铰外移。试验结果表明，试件的承载力和变形能力满足AISC 341-16中规定的中等抗弯框架要求。此外，采用塑性铰外移概念以及PC梁截面底部钢筋有效拉力预测的承载力与试验结果一致。"
+      }
+    },
+    {
       "id": "paper_2024_5",
       "title": {
         "en": "Cyclic loading test for joints between concrete-filled U-shaped steel beams and bolt-connected steel angle composite columns [Journal of Building Engineering] (2024.08)",
