@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20260116-1",
+      "title": {
+        "en": "PSRC method Included in Singapore Building Design Standards",
+        "ja": "PSRC工法、シンガポール建築設計基準に掲載",
+        "zh": "PSRC工法纳入新加坡建筑设计标准"
+      },
+      "excerpt": {
+        "en": "The PSRC (Prefabricated SRC) column method has been included as an independent chapter in BC4:2025, the Building and Construction Authority (BCA)’s design guide for high-strength steel-concrete composite columns.\n\nBC4:2025 is the basic design guide for all buildings constructed in Singapore and addresses design methods for composite columns using high-strength steel and concrete based on Eurocode 4.\n\nThrough several projects constructed in Singapore using PSRC, the Building and Construction Authority (BCA) has recognized the safety, economic feasibility, and innovativeness of this method. It has established an entirely new chapter (Chapter 6) specifically for the method and included various examples of PSRC applications in the Example Calculations to the Requirement of BC4:2025.\n\nAs one of the leading technologies in OSC (Off-Site Construction), which is gaining attention as the next major trend in the construction industry, PSRC is being extensively applied to semiconductor plants, data centers, and advanced manufacturing facilities, where demand has increased in the era of AI (artificial intelligence). In Singapore, it has been applied to Hyundai Motor Group Innovation Center Singapore (HMGICS) and the JTC Logistics Hub of JTC Corporation (formerly Jurong Town Corporation). In particular, the JTC Logistics Hub was selected as the BCA Project of the Year 2024 (Industrial Buildings category).\n\nSingapore maintains some of the world’s most stringent construction and structural safety standards while actively embracing technological innovation, exerting significant influence on the surrounding Southeast Asia construction market. This achievement is expected to greatly help enhance the reliability of the PSRC method not only in Southeast Asia, including Malaysia, Thailand, and Vietnam, but also in other overseas markets.",
+        "ja": "PSRC（Prefabricated SRC）柱工法が、シンガポール建設庁（BCA）の高強度鋼・コンクリート合成柱設計ガイドであるBC4:2025に、独立した章として収載されました。\n\nBC4:2025は、シンガポールで建設されるすべての建築物の基本設計ガイドであり、Eurocode 4に基づき、高強度鋼材・コンクリートを適用した合成柱の設計方法を扱っています。\n\nシンガポール建設庁（BCA）はこれまで、シンガポールでPSRCを適用して建設された複数のプロジェクトを通じて、本工法の安全性、経済性、革新性に着目し、特定工法のために新たな章（Chapter 6）を新設するとともに、実務例計算書（Example Calculations to the Requirement of BC4:2025）にも多様なPSRC適用事例を収録しました。\n\n建設業界における次世代の注目分野であるOSC (Off-Site Construction)の先駆者の一つであるPSRCは、AI（人工知能）時代を迎え、需要が拡大した半導体工場、データセンター、先端製造施設などに数多く適用されています。シンガポールでは、Hyundai Motor Group Innovation Center Singapore (HMGICS)、JTC Corporation (formerly Jurong Town Corporation) Logistics Hubに適用されており、特にJTC Logistics Hubは2024年、BCA「Project of the Year 2024」（産業用建築部門）に選定されました。\n\nシンガポールは、建設および構造安全基準が世界的に最も厳格である一方、技術革新にも積極的な姿勢を維持しており、周辺の東南アジア建設市場に大きな影響力を有しています。今回の成果は、マレーシア・タイ・ベトナムなどの東南アジアはもとより、その他の海外市場においてもPSRC工法の信頼性を高めるうえで大きく寄与することが期待されます。",
+        "zh": "PSRC（Prefabricated SRC）柱工法已作为独立章节被收录于新加坡建设局（BCA）高强度钢-混凝土组合柱设计指南BC4:2025中。\n\nBC4:2025是在新加坡建设的所有建筑物的基础设计指南，并以Eurocode 4为基础，涵盖采用高强度钢材和混凝土的组合柱设计方法。\n\n新加坡建设局通过此前在新加坡采用PSRC建成的多个项目，关注到该工法的安全性、经济性和创新性，专门为特定工法新增了全新章节（Chapter 6），并在实务示例计算书（Example Calculations to the Requirement of BC4:2025）中收录了多种PSRC应用示例。\n\n作为备受瞩目的建筑业下一代热门议题OSC (Off-Site Construction)的领先者之一，PSRC正被大量应用于迎来AI（人工智能）时代后需求不断增长的半导体工厂、数据中心及先进制造设施等。在新加坡，PSRC已应用于Hyundai Motor Group Innovation Center Singapore (HMGICS)和JTC Corporation (formerly Jurong Town Corporation) Logistics Hub，尤其是JTC Logistics Hub还于2024年获选为BCA「Project of the Year 2024」（工业建筑组）。\n\n新加坡的建筑及结构安全标准在全球最为严格，同时始终积极推动技术创新，因此对周边东南亚建筑市场具有重大影响力。此次成果预计将有助于提升PSRC工法在马来西亚、泰国、越南等东南亚以及其他海外市场的可靠性。"
+      }
+    },
+    {
       "id": "news-20260129",
       "title": {
         "en": "SENCORETECH CEO Lee Seung-hwan Interview Published in The Korea Economic Daily",
