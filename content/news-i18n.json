@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20240909-1",
+      "title": {
+        "en": "Industrial Structure Applying PSRC & TSC Selected as BCA (Singapore Building and Construction Authority)’s “Project of the Year 2024”",
+        "ja": "PSRC & TSCを適用した産業構造物、BCA（シンガポール建設庁）「今年のプロジェクト2024」に選定",
+        "zh": "应用PSRC & TSC的工业结构物，获BCA（新加坡建设局）选为“2024年度项目”"
+      },
+      "excerpt": {
+        "en": "An industrial facility incorporating SEN Engineering Group’s ‘Pre-Assembled Composite Method’ has been selected as the ‘Project of the Year’ in Singapore.\n\nJTC Logistics Hub, the final award-winning project in the industrial structures category, is the first project to apply our PSRC & TSC system in Singapore, and\n\nin that it was a public-sector construction project (commissioned by a public enterprise under the Singapore Building and Construction Authority) with higher acceptance standards for the application of new technologies than typical private-sector projects,\n\nit holds great significance for expanding our presence in the Singapore market going forward.\n\nThe executives of Kimly, an outstanding local Singapore construction company that led the project,\n\nemphasized the excellence of SEN Engineering Group’s innovative new PSRC & TSC system in their award-winning project presentation.",
+        "ja": "SEN Engineering Groupの「先組立合成工法」が採用された産業施設が、シンガポールで「今年のプロジェクト」に選定されました。\n\n産業構造物部門の最終受賞作であるJTC Logistics Hubは、当社のPSRC & TSCシステムをシンガポールで初めて適用したプロジェクトであり、\n\n通常の民間プロジェクトよりも新技術の適用許容基準が高い公共工事（シンガポール建設庁傘下の公企業発注）であった点で、\n\n今後のシンガポール市場における裾野拡大に大きな意義があります。\n\n当該プロジェクトを主管したシンガポール現地の優良建設会社Kimlyの役員陣は、受賞作説明プレゼンテーションにおいて、\n\nSEN Engineering Groupの革新的な新工法であるPSRC & TSCシステムの優秀性を強調しました。",
+        "zh": "采用SEN Engineering Group“预组装组合工法”的工业设施在新加坡被评选为“年度项目”。\n\n作为工业结构物部门最终获奖作品的JTC Logistics Hub，是本公司PSRC & TSC系统首次应用于新加坡的项目，\n\n且该项目为政府工程（由新加坡建设局下属国有企业发包），其新技术应用许可标准高于一般民间项目，\n\n因此对今后扩大在新加坡市场的基础具有重大意义。\n\n负责该项目的新加坡当地优秀建筑公司Kimly管理层在获奖作品说明演示中\n\n强调了SEN Engineering Group创新型新工法PSRC & TSC系统的卓越性。"
+      }
+    },
+    {
       "id": "tech_2024_5",
       "title": {
         "en": "Application of the Pre-Assembled Composite Construction Method in the Singapore Construction Market and Design Case Studies – Winner of BCA Project of the Year 2024 [Journal of the Korean Society of Steel Construction] (2024.10)",
