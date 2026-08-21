@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2025_2",
+      "title": {
+        "en": "PSRC Column–TSC Beam Composite System for the Hyundai Motor Group Innovation Center Singapore [Structural Engineering International] <2025.12>",
+        "ja": "ヒョンデ・モーター・グループ・イノベーション・センター・シンガポールのためのPSRC柱–TSC梁複合システム［Structural Engineering International］＜2025.12＞",
+        "zh": "现代汽车集团新加坡创新中心的PSRC柱–TSC梁组合体系 [Structural Engineering International] <2025.12>"
+      },
+      "excerpt": {
+        "en": "Authors: Lee Seung-hwan, Cho Gwang-won, Noh Kyung-min, Park Jae-hyuk\nAbstract: The Hyundai Motor Group Innovation Center Singapore (HMGICS) is a seven-storey, 86,900 m² smart-factory integrating EV manufacturing, R&D, and customer experience functions. To meet high structural demands within a compressed schedule, a composite system of Prefabricated Steel-Reinforced Concrete (PSRC) columns and Thin-Steel Composite (TSC) beams was adopted. The PSRC system—characterized by steel angles, bolt-only connections, permanent steel formwork—eliminated field welding and temporary shoring, reducing on-site labour by approximately 40% and shortening construction by five months. Design followed Eurocodes with the Singapore National Annex. The PSRC–TSC frame satisfied Class 3 robustness criteria through key-element design. Despite pandemic-related logistics challenges, the prefabricated PSRC-TSC system proved effective and is formally recognized in Singapore’s forthcoming BC4:2025 Design Guide. The project affirms the PSRC–TSC system’s potential for high-performance, prefabricated industrial structures.",
+        "ja": "著者：イ・スンファン、チョ・グァンウォン、ノ・ギョンミン、パク・ジェヒョク\n要旨：Hyundai Motor Group Innovation Center Singapore（HMGICS）は、EV製造、研究開発（R&D）、および顧客体験機能を統合した、地上7階建て、延床面積86,900 m²のスマートファクトリーである。短縮された工期の中で高い構造要求を満たすため、プレハブ鉄骨鉄筋コンクリート（PSRC）柱と薄肉鋼材複合（TSC）梁による複合システムが採用された。鋼製アングル、ボルトのみの接合、および恒久鋼製型枠を特徴とするPSRCシステムは、現場溶接および仮設支保工を不要とし、現場労働力を約40%削減するとともに、工期を5か月短縮した。設計はシンガポール国家付属書を伴うユーロコードに従って実施された。PSRC–TSC架構は、キーエレメント設計によりクラス3のロバストネス基準を満たした。パンデミックに起因する物流上の課題にもかかわらず、プレハブPSRC-TSCシステムは有効性を実証し、シンガポールで発行予定のBC4:2025設計ガイドに正式に認定されている。本プロジェクトは、高性能なプレハブ産業構造物に対するPSRC–TSCシステムの可能性を裏付けるものである。",
+        "zh": "作者：李承焕、赵光元、卢庆民、朴在赫\n摘要：现代汽车集团新加坡创新中心（HMGICS）是一座七层、86,900 m²的智能工厂，集成了电动汽车制造、研发及客户体验功能。为在紧凑工期内满足高结构性能要求，项目采用了预制钢骨混凝土（PSRC）柱与薄钢组合（TSC）梁组成的组合体系。PSRC体系采用钢角钢、仅螺栓连接和永久性钢模板，免除了现场焊接和临时支撑，使现场劳动力减少约40%，工期缩短五个月。设计遵循欧盟规范及新加坡国家附录。PSRC–TSC框架通过关键构件设计满足了第3类结构稳健性标准。尽管面临与疫情相关的物流挑战，预制PSRC-TSC体系仍被证明是有效的，并已获得新加坡即将发布的BC4:2025设计指南的正式认可。该项目证实了PSRC–TSC体系在高性能预制工业建筑中的应用潜力。"
+      }
+    },
+    {
       "id": "news-20260116-1",
       "title": {
         "en": "PSRC method Included in Singapore Building Design Standards",
