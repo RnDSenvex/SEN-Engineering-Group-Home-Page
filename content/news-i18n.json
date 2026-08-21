@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "tech_2025_1",
+      "title": {
+        "en": "Incorporation of the PSRC Composite Column System into Singapore Structural Design Standard (BC4:2025) and Its Technical Implications [Journal of Korean Society of Steel Construction] (2025.07)",
+        "ja": "PSRC合成柱システムのシンガポール構造設計基準（BC4:2025）への反映と技術的含意［韓国鋼構造学会誌］（2025.07）",
+        "zh": "PSRC组合柱系统纳入新加坡结构设计标准（BC4:2025）及其技术意义［韩国钢结构学会志］（2025.07）"
+      },
+      "excerpt": {
+        "en": "Authors: Manager Jo Gwang-won, Assistant Manager Gu Ja-hun, CEO Lee Seung-hwan",
+        "ja": "著者：チョ・グァンウォン課長、ク・ジャフン代理、イ・スンファン代表取締役",
+        "zh": "作者：赵光元经理、具子勋代理、李承焕代表理事"
+      }
+    },
+    {
       "id": "news-20251203-1",
       "title": {
         "en": "The Game Changer in the Construction Industry, OSC",
