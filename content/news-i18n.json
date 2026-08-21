@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id": "news-20251218",
+      "title": {
+        "en": "SEN CORETECH CEO Lee Seung-hwan Selected as One of Seoul National University College of Engineering’s “50 Innovative Alumni”",
+        "ja": "SEN CORETECH イ・スンファン代表、ソウル大学校工科大学「革新同窓生50人」に選定",
+        "zh": "SEN CORETECH代表李承焕入选首尔大学工学院“50位创新校友”"
+      },
+      "excerpt": {
+        "en": "Seoul National University College of Engineering commemorated 2025, the 50th anniversary of relocating its College of Engineering campus, formerly located in Gongneung-dong, Seongbuk-gu, to the current Gwanak Campus, by selecting “50 Innovative SNU Engineering Alumni Produced by Gwanak” and announcing them to the press on December 18.\n\nThis is a meaningful event to select and honor engineering alumni of Seoul National University College of Engineering who have led innovation at key junctures in the history of Korea’s industrial development.\n\nLee Seung-hwan, CEO of SEN CORETECH and an alumnus of the Department of Architecture at Seoul National University College of Engineering (Class of 1996), was selected as one of three honorees in the construction sector, a key national industry.\n\nThe two other innovative alumni selected in the construction sector, in addition to CEO Lee Seung-hwan, are as follows:\n\nChung Young-kyun, alumnus (Class of 1978), Chairman of Heerim Architects & Planners  \nOh Se-chul, alumnus (Class of 1981), President and CEO of Samsung C&T Corporation, Engineering & Construction Group\n\nKim Young-oh, Dean of Seoul National University College of Engineering, said, “Graduates of Seoul National University College of Engineering have been part of every major turning point in Korean industry, from steel to semiconductors and AI,” adding, “I hope future generations will look to those selected this time as role models, take pride, and grow into engineers who pioneer paths in science and engineering.”",
+        "ja": "国立ソウル大学校工科大学は、城北区孔陵洞に位置していた工科大学キャンパスを現在の冠岳キャンパスへ移転してから50周年となる2025年を記念し、「冠岳が輩出したソウル大学工科大学の革新的同窓生50人」を選定し、12月18日付で報道機関に発表しました。\n\nこれは、韓国の産業発展史における主要な局面で革新を主導してきたソウル大学工科大学出身の工学者を選定・記念する意義深い行事です。\n\nソウル大学校工科大学建築学科の同窓生（96年入学）であるSEN CORETECHのイ・スンファン代表が、国家基幹産業分野である建設部門の選定者3人のうち1人に選ばれました。\n\n\nイ・スンファン代表以外の建設分野の革新的同窓生として選定された2人は以下の通りです：\n\nHeerim Architects & Planners会長、チョン・ヨンギュン同窓生（78年入学）\nサムスンC&T建設部門代表取締役、オ・セチョル同窓生（81年入学）\n\nキム・ヨンオ ソウル大学工科大学学長は、「鉄鋼から半導体、AIに至るまで、韓国産業の大きな転換点ごとにソウル大学工科大学出身者が共にしてきた」とし、「未来世代が今回選定された人物たちを模範とし、誇りを持って理工系の道を切り開く工学者へと成長することを期待する」と述べました。",
+        "zh": "国立首尔大学工学院为纪念位于城北区孔陵洞的工学院校区迁至现冠岳校区满50周年的2025年，评选出“冠岳培育的首尔工大创新校友50人”，并于12月18日向媒体公布。\n\n这是一项意义深远的活动，旨在选出并纪念在我国工业发展史的主要阶段引领创新的首尔大学工学院工程师校友。\n\n首尔大学工学院建筑学系校友（96级）、SEN CORETECH代表李承焕，在国家基础产业领域的建设部门3名入选者中被选为其中1人。\n\n \n\n除李承焕代表外，另外2名获选的建设领域创新校友如下：\n\nHeerim Architects & Planners会长，郑英均校友（78级）\n三星物产建设部门代表董事，吴世哲校友（81级）\n \n\n首尔大学工学院院长金英五表示：“从钢铁到半导体、AI，韩国工业每一个重要转折点都有首尔工大出身者的参与。”他还表示：“期待未来一代以此次入选人物为榜样，怀着自豪感成长为开拓理工科道路的工程师。”"
+      }
+    },
+    {
       "id": "tech_2025_2",
       "title": {
         "en": "PSRC Column–TSC Beam Composite System for the Hyundai Motor Group Innovation Center Singapore [Structural Engineering International] <2025.12>",
